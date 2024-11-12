@@ -1086,7 +1086,7 @@ MonoBehaviour:
   m_Follow: {fileID: 129531618}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 17.267967
+    OrthographicSize: 10
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -1421,7 +1421,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 17.267967
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3030,6 +3030,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track1
       objectReference: {fileID: 0}
+    - target: {fileID: 2306574249900681899, guid: a28fcb5b6581394499b01b01b2e481ba, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5729772615289079312, guid: a28fcb5b6581394499b01b01b2e481ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3048,15 +3052,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5729772615289079312, guid: a28fcb5b6581394499b01b01b2e481ba, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5729772615289079312, guid: a28fcb5b6581394499b01b01b2e481ba, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5729772615289079312, guid: a28fcb5b6581394499b01b01b2e481ba, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5729772615289079312, guid: a28fcb5b6581394499b01b01b2e481ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3379,7 +3383,6 @@ SceneRoots:
   - {fileID: 2105029687}
   - {fileID: 129531618}
   - {fileID: 377024059}
-  - {fileID: 1876617368}
   - {fileID: 1982810532}
   - {fileID: 293740350}
   - {fileID: 1168537477}
@@ -3392,3 +3395,4 @@ SceneRoots:
   - {fileID: 1238501949}
   - {fileID: 896266979}
   - {fileID: 1435141204}
+  - {fileID: 1876617368}
