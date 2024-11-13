@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 455693226bd47394ca0cd2133b0cb57a
+guid: 460dfe9da3851634aa178536e4895088
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Nuclear bomb_0
+      name: Road pieces and bigger road_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 128
-        height: 128
+        x: 159
+        y: 1759
+        width: 322
+        height: 642
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a906b5fdc1169ae4e8fdb206afc89663
-      internalID: -15411870
+      spriteID: b79f972a80f644b42ae11065b358882d
+      internalID: -1750551826
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nuclear bomb_1
+      name: Road pieces and bigger road_1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 128
-        height: 128
+        x: 639
+        y: 1759
+        width: 322
+        height: 642
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54655f09d9ab3304ba7c39f05b1816a8
-      internalID: -1355239250
+      spriteID: 9693ed37c55105041999d394eb8c0ef0
+      internalID: 1914115114
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nuclear bomb_2
+      name: Road pieces and bigger road_2
       rect:
         serializedVersion: 2
-        x: 256
-        y: 0
-        width: 128
-        height: 128
+        x: 1119
+        y: 1759
+        width: 322
+        height: 642
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1ee25793bdcc1840b0ca8dc78ecf734
-      internalID: 1083403658
+      spriteID: ef6a59efc3be3fb4a8976b98eda61a80
+      internalID: -460919706
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nuclear bomb_3
+      name: Road pieces and bigger road_3
       rect:
         serializedVersion: 2
-        x: 384
-        y: 0
-        width: 128
-        height: 128
+        x: 1599
+        y: 1759
+        width: 322
+        height: 642
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb608908569464d46abf923321930e70
-      internalID: 1292033674
+      spriteID: df85b6e0520ff0b429dbc86fe3ed2687
+      internalID: -482599048
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nuclear bomb_4
+      name: Road pieces and bigger road_4
       rect:
         serializedVersion: 2
-        x: 512
-        y: 0
-        width: 128
-        height: 128
+        x: 2079
+        y: 1759
+        width: 162
+        height: 642
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41e84099c6008a041b620189c6fa1332
-      internalID: 1257138505
+      spriteID: 6d59318d631c4e14eab4ab8b1c118ab9
+      internalID: -1198072593
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nuclear bomb_5
+      name: Road pieces and bigger road_5
       rect:
         serializedVersion: 2
-        x: 640
-        y: 0
-        width: 128
-        height: 128
+        x: 319
+        y: 159
+        width: 1922
+        height: 1282
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,92 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0bea0a2664fab940ad8d4c9368ec959
-      internalID: 1600124452
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Nuclear bomb_6
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8158070eb50850a49befeaf6aaadbbaf
-      internalID: 211459980
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Nuclear bomb_7
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3358b5faba79a0c42b114224450f1da0
-      internalID: -2084768910
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Nuclear bomb_8
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 958071b61a5a7f44585bcd474cb7c2ab
-      internalID: 1631751129
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Nuclear bomb_9
-      rect:
-        serializedVersion: 2
-        x: 1152
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 983a0d45544b15345a7d21f76a5998fc
-      internalID: -1867093513
+      spriteID: 54dd947beee171245afb9685a3fc2dd5
+      internalID: 442001268
       vertices: []
       indices: 
       edges: []
@@ -343,16 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Nuclear bomb_0: -15411870
-      Nuclear bomb_1: -1355239250
-      Nuclear bomb_2: 1083403658
-      Nuclear bomb_3: 1292033674
-      Nuclear bomb_4: 1257138505
-      Nuclear bomb_5: 1600124452
-      Nuclear bomb_6: 211459980
-      Nuclear bomb_7: -2084768910
-      Nuclear bomb_8: 1631751129
-      Nuclear bomb_9: -1867093513
+      Road pieces and bigger road_0: -1750551826
+      Road pieces and bigger road_1: 1914115114
+      Road pieces and bigger road_2: -460919706
+      Road pieces and bigger road_3: -482599048
+      Road pieces and bigger road_4: -1198072593
+      Road pieces and bigger road_5: 442001268
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
