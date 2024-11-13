@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -121,7 +121,343 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Alien, car 3&4 spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 194
+        width: 27
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee840f81d5d42dc4a93360614c22eeb7
+      internalID: -179962987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alien, car 3&4 spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 199
+        width: 27
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9998d93dab49e8c4aaccc8249ae41080
+      internalID: 1657315116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alien, car 3&4 spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 210
+        width: 55
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 664735888a6d5a14f996aa81ddc4138d
+      internalID: 205906752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alien, car 3&4 spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 210
+        width: 63
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b19e2613af17ebf4b8714fae002ce99d
+      internalID: -320496670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alien, car 3&4 spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 131
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc72665d8a2c0b408f33060deba30d9
+      internalID: 1860726169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alien, car 3&4 spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 135
+        width: 53
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60497e21128685c4c9ba9db6afc1936c
+      internalID: 148916937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alien, car 3&4 spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 135
+        width: 55
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8a735d880e7f8c4c9ee1ad2ff0b8446
+      internalID: -1566908089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alien, car 3&4 spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 132
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67c6a6d3b8619ff4f82e83092944449a
+      internalID: -357155724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alien, car 3&4 spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 66
+        width: 27
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d40e5e7749b23674aa37a6ed9322d0d6
+      internalID: 1576522222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alien, car 3&4 spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 71
+        width: 27
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fcb99301cdcb6f49aaec21bc9bca8c6
+      internalID: 537638169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alien, car 3&4 spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 82
+        width: 57
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8adea0be5b11d34ca059ffc79874d04
+      internalID: 481894634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alien, car 3&4 spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 82
+        width: 57
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed56c6865cfe4fb4fa5d3a1130635daf
+      internalID: 84994283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alien, car 3&4 spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 4
+        width: 54
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b963f3010d0ea4248ad8729bbddf41b3
+      internalID: 50828852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alien, car 3&4 spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 8
+        width: 52
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4470952f2bd2405408636877f854b9a5
+      internalID: -1943255111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alien, car 3&4 spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 8
+        width: 52
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bca72871f5dcc0042960f40a233f03c1
+      internalID: -1473978904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alien, car 3&4 spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 5
+        width: 53
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24b4281d7b355d24bacab689387adfae
+      internalID: 1800738361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +468,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Alien, car 3&4 spritesheet_0: -179962987
+      Alien, car 3&4 spritesheet_1: 1657315116
+      Alien, car 3&4 spritesheet_10: 481894634
+      Alien, car 3&4 spritesheet_11: 84994283
+      Alien, car 3&4 spritesheet_12: 50828852
+      Alien, car 3&4 spritesheet_13: -1943255111
+      Alien, car 3&4 spritesheet_14: -1473978904
+      Alien, car 3&4 spritesheet_15: 1800738361
+      Alien, car 3&4 spritesheet_2: 205906752
+      Alien, car 3&4 spritesheet_3: -320496670
+      Alien, car 3&4 spritesheet_4: 1860726169
+      Alien, car 3&4 spritesheet_5: 148916937
+      Alien, car 3&4 spritesheet_6: -1566908089
+      Alien, car 3&4 spritesheet_7: -357155724
+      Alien, car 3&4 spritesheet_8: 1576522222
+      Alien, car 3&4 spritesheet_9: 537638169
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
