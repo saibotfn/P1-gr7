@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae77018fb34f4384ba7dcb092ff575d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
+  score: 1
   scoreText: {fileID: 447257248}
 --- !u!4 &45994933
 Transform:
@@ -1205,6 +1205,7 @@ MonoBehaviour:
   - {fileID: 8209003991947550357, guid: e8c613853924cf94e945219ae6419906, type: 3}
   - {fileID: 5758516274191780820, guid: 68b39d33a408fd843836330ead63e746, type: 3}
   - {fileID: 10612450500311464, guid: 9aeb86a9ff46e2c46bae43401bbff10f, type: 3}
+  - {fileID: 1871334950064213965, guid: dec8d354e59e9f34ab6b567247cca9cb, type: 3}
   player: {fileID: 1074868672}
   spawnDistance: 25.64
   pieceLenght: 12.82
