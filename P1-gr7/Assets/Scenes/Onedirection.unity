@@ -1110,7 +1110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ceabf77eb03f47adbabdcf928c82c29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsPerUnit: 10
+  pointsPerUnit: 5
   pointsDisplay: {fileID: 447257248}
 --- !u!1 &1188616766
 GameObject:
