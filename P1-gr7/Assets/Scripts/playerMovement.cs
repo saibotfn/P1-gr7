@@ -1,35 +1,55 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem; //Input system library
 
-public class playerMovement : MonoBehaviour
+public class CarController2D : MonoBehaviour
 {
-    private Vector2 movement; //Gemmer den vector der kommer når brugeren trykker på WASD
-    private Rigidbody2D myBody; //Gemmer den Rigigdbody vi flytter rundt på
-    private Animator myAnimator; //En animator så man kan interagere med den i koden
+    public float speed = 0f;        // Bilens aktuelle hastighed
+    public float maxSpeed = 10f;   // Maksimal hastighed
+    public float acceleration = 2f; // Hvor hurtigt bilen accelererer
+    public float deceleration = 2f; // Hvor hurtigt bilen bremser
+    public float sideSpeed = 5f;   // SidelÃ¦ns hastighed
 
-    [SerializeField] private int speed = 5; //Sætter hastighed som charateren flytter sig med
+    private float horizontalInput; // Input til sidelÃ¦ns bevÃ¦gelse
 
-    private void Awake() //Awake kører når programmet starter lidt ala start men anderledes
+    void Start()
     {
-        myBody = GetComponent<Rigidbody2D>(); //Sætter myBody rigidbody til den samme rigidbody som den gameobject den sidder på
-        myAnimator = GetComponent<Animator>(); //animator til den animator der sidder på gameobejectet
+        // SÃ¸rg for at bilen starter med den rigtige rotation (peger opad)
+        transform.rotation = Quaternion.Euler(0, 0, 0); // SÃ¦t rotationen til 0 pÃ¥ Z-aksen (peger opad)
     }
 
-    private void OnMovement(InputValue value) //En funktion der holder øje med den value der kommer fra input
+    void Update()
     {
-        movement = value.Get<Vector2>(); //Movement bliver sat til den vector2 der kommer når man trykker på wasd
+        // Input til sidelÃ¦ns bevÃ¦gelse (A/D eller piletasterne venstre/hÃ¸jre)
+        horizontalInput = Input.GetAxis("Horizontal");
 
-        if (movement.x != 0 || movement.y != 0) {
-            myAnimator.SetFloat("x", movement.x);
-            myAnimator.SetFloat("y", movement.y);
+        // Input til hastighed (W/S eller op/ned)
+        float verticalInput = Input.GetAxis("Vertical");
+
+        // Juster hastigheden (W = acceleration, S = deceleration)
+        if (verticalInput > 0) // W-tasten: AccelerÃ©r
+        {
+            speed += acceleration * Time.deltaTime;
+        }
+        else if (verticalInput < 0) // S-tasten: SÃ¦nk hastigheden
+        {
+            speed -= deceleration * Time.deltaTime;
         }
 
+        // BegrÃ¦ns hastigheden til at vÃ¦re mellem 0 og maxSpeed
+        speed = Mathf.Clamp(speed, 0, maxSpeed);
+
+        // BevÃ¦g bilen opad langs y-aksen (fremad)
+        // Bilen skal kun bevÃ¦ge sig opad langs y-aksen uden rotation
+        transform.Translate(Vector2.up * speed * Time.deltaTime);
+
+        // BevÃ¦g bilen sidelÃ¦ns langs x-aksen
+        transform.Translate(Vector2.right * horizontalInput * sideSpeed * Time.deltaTime);
     }
 
-    private void FixedUpdate()// mere optimal version af update til vores formål
+    // Kollision med objekter
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        myBody.velocity = movement * speed; //Sætter velocity af rigidbody til den hastighed der er bestemt ved speed
+        Debug.Log("Kollision med: " + collision.gameObject.name);
+        Destroy(collision.gameObject); // Fjern objektet ved kollision
+        speed = Mathf.Clamp(speed - 2f, 0, maxSpeed); // SÃ¦nk bilens hastighed
     }
 }
