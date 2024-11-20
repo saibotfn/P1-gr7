@@ -56,5 +56,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "P1-gr7.sln"
+    "dotnet.defaultSolution": "P1-gr7.sln",
+    "FSharp.suggestGitignore": false
 }
