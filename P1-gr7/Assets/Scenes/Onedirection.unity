@@ -970,10 +970,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1074868665}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c5f487a5969369479fe0932a7b04ef7, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b4012c716af03f45872769bd678d537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 0
+  maxSpeed: 10
+  acceleration: 2
+  deceleration: 2
+  sideSpeed: 5
 --- !u!50 &1074868669
 Rigidbody2D:
   serializedVersion: 4
