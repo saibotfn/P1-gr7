@@ -9,6 +9,7 @@ public class playerMovement : MonoBehaviour
     public float acceleration = 2f; // Hvor hurtigt bilen accelererer
     public float deceleration = 2f; // Hvor hurtigt bilen bremser
     public float sideSpeed = 5f;   // Sidelæns hastighed
+    private Animator animator;      //sætter animatoren op så bilen kan dreje rundt
 
     private float horizontalInput; // Input til sidelæns bevægelse
 
@@ -16,6 +17,7 @@ public class playerMovement : MonoBehaviour
     {
         // Sørg for at bilen starter med den rigtige rotation (peger opad)
         transform.rotation = Quaternion.Euler(0, 0, 0); // Sæt rotationen til 0 på Z-aksen (peger opad)
+        animator = GetComponent<Animator>(); //Finder animator componenten frem
     }
 
     void Update()
@@ -52,5 +54,6 @@ public class playerMovement : MonoBehaviour
         Debug.Log("Kollision med: " + collision.gameObject.name);
         Destroy(collision.gameObject); // Fjern objektet ved kollision
         speed = Mathf.Clamp(speed - 2f, 0, maxSpeed); // Sænk bilens hastighed
+        animator.SetTrigger("Hit"); //Kalder funktionen set trigger i animator og sætter triggeren til hit
     }
 }
