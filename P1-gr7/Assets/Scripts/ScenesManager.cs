@@ -8,9 +8,13 @@ public class ScenesManager : MonoBehaviour
 
     public static ScenesManager Instance;
 
+
+    public int CurrentSceneIndex { get; private set; }
+
     private void Awake()
     {
         Instance = this;
+        UpdateCurrentSceneIndex();
     }
 
     public enum Scene
@@ -42,6 +46,8 @@ public class ScenesManager : MonoBehaviour
         SceneManager.LoadScene(Scene.MainMenu.ToString());
     }
 
-
-    
+    private void UpdateCurrentSceneIndex()
+    {
+        CurrentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+    }
 }
