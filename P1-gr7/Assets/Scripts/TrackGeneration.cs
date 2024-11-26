@@ -6,14 +6,18 @@ public class TrackGeneration : MonoBehaviour
 {
     public GameObject trackPiecePrefab; //The track piece prefab
     public GameObject[] obstaclePrefabs; //Array of obstacle prefabs
+    public GameObject finishLinePrefabs; //finish line prefab
     public Transform player; //References the player transform
     public float spawnDistance = 25.64f; //How far infront of the player the track start spawning
     public float pieceLenght = 12.82f; //Lenght of the track pieces
     private List<GameObject> activePieces = new List<GameObject>(); //Tracking the active pieces
     private float spawnPosTrack = 0.0f; //The spawn position of the track
+    private bool finishSpawned = false; //Makes sure finish only spawns once
+    public DrivePoints drivePoints; // Reference to the DrivePoints script
 
     void Start()
     {
+    
         for (int i = 0; i < 5; i++)
         {
             SpawnTrackPiece();
@@ -22,12 +26,29 @@ public class TrackGeneration : MonoBehaviour
     }
 
     void Update()
-    {
-        if (player.position.y > spawnPosTrack - 2 * spawnDistance)
+  {
+        // Check if finish line is not spawned
+        if (!finishSpawned)
         {
-            SpawnTrackPiece();
-            RemoveOldTrackPieces();
+            if (player.position.y > spawnPosTrack - 2 * spawnDistance)
+            {
+                SpawnTrackPiece();
+                RemoveOldTrackPieces();
+            }
+
+            // Spawn finish line when points reach threshold
+            if (drivePoints.GetPoints() >= 3000 && !finishSpawned)
+            {
+                SpawnFinish();
+            }
         }
+    }
+    void SpawnFinish()
+     {
+        Vector3 finishLinePosition = new Vector3(0, spawnPosTrack, 0);
+        Instantiate(finishLinePrefabs, finishLinePosition, Quaternion.identity);
+        finishSpawned = true;
+        Debug.Log("Finish line spawned at: " + finishLinePosition);
     }
     void SpawnTrackPiece()
     {
@@ -59,3 +80,4 @@ public class TrackGeneration : MonoBehaviour
 
     }
 }
+

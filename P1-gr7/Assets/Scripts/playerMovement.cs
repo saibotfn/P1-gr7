@@ -8,52 +8,72 @@ public class playerMovement : MonoBehaviour
     public float maxSpeed = 10f;   // Maksimal hastighed
     public float acceleration = 2f; // Hvor hurtigt bilen accelererer
     public float deceleration = 2f; // Hvor hurtigt bilen bremser
-    public float sideSpeed = 5f;   // Sidelæns hastighed
-    private Animator animator;      //sætter animatoren op så bilen kan dreje rundt
+    public float sideSpeed = 5f;   // Sidelï¿½ns hastighed
+    private Animator animator;      //sï¿½tter animatoren op sï¿½ bilen kan dreje rundt
 
-    private float horizontalInput; // Input til sidelæns bevægelse
+    private float horizontalInput; // Input til sidelï¿½ns bevï¿½gelse
 
     void Start()
     {
-        // Sørg for at bilen starter med den rigtige rotation (peger opad)
-        transform.rotation = Quaternion.Euler(0, 0, 0); // Sæt rotationen til 0 på Z-aksen (peger opad)
+        // Sï¿½rg for at bilen starter med den rigtige rotation (peger opad)
+        transform.rotation = Quaternion.Euler(0, 0, 0); // Sï¿½t rotationen til 0 pï¿½ Z-aksen (peger opad)
         animator = GetComponent<Animator>(); //Finder animator componenten frem
     }
 
     void Update()
     {
-        // Input til sidelæns bevægelse (A/D eller piletasterne venstre/højre)
+        // Input til sidelï¿½ns bevï¿½gelse (A/D eller piletasterne venstre/hï¿½jre)
         horizontalInput = Input.GetAxis("Horizontal");
 
         // Input til hastighed (W/S eller op/ned)
         float verticalInput = Input.GetAxis("Vertical");
 
         // Juster hastigheden (W = acceleration, S = deceleration)
-        if (verticalInput > 0) // W-tasten: Accelerér
+        if (verticalInput > 0) // W-tasten: Accelerï¿½r
         {
             speed += acceleration * Time.deltaTime;
         }
-        else if (verticalInput < 0) // S-tasten: Sænk hastigheden
+        else if (verticalInput < 0) // S-tasten: Sï¿½nk hastigheden
         {
             speed -= deceleration * Time.deltaTime;
         }
 
-        // Begræns hastigheden til at være mellem 0 og maxSpeed
+        // Begrï¿½ns hastigheden til at vï¿½re mellem 0 og maxSpeed
         speed = Mathf.Clamp(speed, 0, maxSpeed);
 
-        // Bevæg bilen opad langs y-aksen (fremad)
-        // Bilen skal kun bevæge sig opad langs y-aksen uden rotation
+        // Bevï¿½g bilen opad langs y-aksen (fremad)
+        // Bilen skal kun bevï¿½ge sig opad langs y-aksen uden rotation
         transform.Translate(Vector2.up * speed * Time.deltaTime);
 
-        // Bevæg bilen sidelæns langs x-aksen
+        // Bevï¿½g bilen sidelï¿½ns langs x-aksen
         transform.Translate(Vector2.right * horizontalInput * sideSpeed * Time.deltaTime);
     }
     // Kollision med objekter
     private void OnCollisionEnter2D(Collision2D collision)
+{
+    // Hvis bilen rammer en barriere
+    if (collision.gameObject.CompareTag("Barrier"))
     {
-        Debug.Log("Kollision med: " + collision.gameObject.name);
-        Destroy(collision.gameObject); // Fjern objektet ved kollision
-        speed = Mathf.Clamp(speed - 2f, 0, maxSpeed); // Sænk bilens hastighed
-        animator.SetTrigger("Hit"); //Kalder funktionen set trigger i animator og sætter triggeren til hit
+        Debug.Log("Bilen ramte en barriere. Ingen handling.");
+        return; // GÃ¸r intet
     }
+    // Hvis bilen rammer et objekt, der skal destrueres
+    else if (collision.gameObject.CompareTag("Obstacle"))
+    {
+        Debug.Log("Bilen ramte et objekt: " + collision.gameObject.name);
+
+        // SÃ¦nk bilens hastighed
+        speed = Mathf.Clamp(speed - 7f, 0, maxSpeed);
+
+        // AktivÃ©r "Hit"-animation
+        if (animator != null)
+        {
+            animator.SetTrigger("Hit");
+        }
+
+        // Fjern objektet
+        Destroy(collision.gameObject);
+    }
+}
+
 }
