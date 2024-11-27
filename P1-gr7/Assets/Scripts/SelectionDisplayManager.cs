@@ -111,7 +111,7 @@ public class SelectionDisplayManager : MonoBehaviour
     // Loads the game scene
     void StartGame()
     {
-        SceneManager.LoadScene("OneDirection"); // Replace with your scene name
+        SceneManager.LoadScene("OneDirection"); 
         Debug.Log("StartGame() called");
     }
 }
