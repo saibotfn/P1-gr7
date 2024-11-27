@@ -1618,7 +1618,7 @@ MonoBehaviour:
   - {fileID: 5758516274191780820, guid: 68b39d33a408fd843836330ead63e746, type: 3}
   - {fileID: 10612450500311464, guid: 9aeb86a9ff46e2c46bae43401bbff10f, type: 3}
   - {fileID: 1871334950064213965, guid: dec8d354e59e9f34ab6b567247cca9cb, type: 3}
-  finishLinePrefabs: {fileID: 3858913447740592498, guid: 2ae9a03c8ad774d9e97d06555341164e, type: 3}
+  finishLinePrefabs: {fileID: 5666245282137987409, guid: 2ae9a03c8ad774d9e97d06555341164e, type: 3}
   player: {fileID: 1074868672}
   spawnDistance: 25.64
   pieceLenght: 12.82
