@@ -13,6 +13,13 @@ public class playerMovement : MonoBehaviour
 
     private float horizontalInput; // Input til sidel�ns bev�gelse
 
+    SFXManager sFXManager;
+
+    private void Awake()//Henter SFX manager, så lyde kan tilgås
+    {
+        sFXManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SFXManager>();
+    }
+
     void Start()
     {
         // S�rg for at bilen starter med den rigtige rotation (peger opad)
@@ -55,6 +62,9 @@ public class playerMovement : MonoBehaviour
     if (collision.gameObject.CompareTag("Barrier"))
     {
         Debug.Log("Bilen ramte en barriere. Ingen handling.");
+
+        sFXManager.PlaySFX(sFXManager.BarrierCollision); //Spiller lyd, når man rammer barriere
+
         return; // Gør intet
     }
     // Hvis bilen rammer et objekt, der skal destrueres
@@ -70,6 +80,8 @@ public class playerMovement : MonoBehaviour
         {
             animator.SetTrigger("Hit");
         }
+
+        sFXManager.PlaySFX(sFXManager.CollisionObstacle); //Spiller lyd til collision med sten/skrald/mm
 
         // Fjern objektet
         Destroy(collision.gameObject);

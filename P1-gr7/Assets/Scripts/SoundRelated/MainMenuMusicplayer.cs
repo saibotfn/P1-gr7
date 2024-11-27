@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuMusicPlayer : MonoBehaviour
 {
-    [SerializeField] AudioSource musicSource;
-
-    [Header("--------Audio Clip-------")]
+    [SerializeField] AudioSource musicSource; //Holds audio source component
 
     public AudioClip MainMenuMusic;
 
     private static MainMenuMusicPlayer instance;
+
+    //int lastMenuSceneIndex = 3;
 
     int currentSceneIndex;
     int previousSceneIndex;

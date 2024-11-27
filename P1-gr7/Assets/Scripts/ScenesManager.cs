@@ -21,6 +21,7 @@ public class ScenesManager : MonoBehaviour
     {
         StartScreen,
         MainMenu,
+        SettingScene,
 
     }
 
@@ -44,6 +45,11 @@ public class ScenesManager : MonoBehaviour
     public void LoadMainMenu()
     {
         SceneManager.LoadScene(Scene.MainMenu.ToString());
+    }
+
+    public void LoadSettingScene()
+    {
+        SceneManager.LoadScene(Scene.SettingScene.ToString());
     }
 
     private void UpdateCurrentSceneIndex()
