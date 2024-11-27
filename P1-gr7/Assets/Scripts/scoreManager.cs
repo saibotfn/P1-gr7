@@ -37,4 +37,19 @@ public class scoreManager : MonoBehaviour
             scoreText.text = "Coins: " + score.ToString();
         }
     }
+    
+    public GameObject winScreen; // Reference to the Win Screen Canvas
+
+    public void ShowWinScreen()
+    {
+        winScreen.SetActive(true); // Activate the Win Screen
+        Time.timeScale = 0; // Pause the game (optional)
+    }
+
+    public void RestartGame()
+    {
+        Time.timeScale = 1; // Resume time
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name); // Reload the current scene
+    }
+
 }
