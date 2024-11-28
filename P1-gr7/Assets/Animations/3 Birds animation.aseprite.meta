@@ -721,6 +721,26 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 217, y: 273}
+  - name: 3 Birds animation_Frame_30
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 251
+      y: 99
+      width: 0
+      height: 0
+    spriteID: 6198183fb4f989147afba3c1126bafff
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 244, y: 96}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -1000,6 +1020,15 @@ ScriptedImporter:
         width: 7
         height: 2
       spriteId: c84a953cafbbfd1499a98c4e83051049
+    - name: 3 Birds animation_Frame_30
+      frameIndex: 30
+      additiveSortOrder: 0
+      cellRect:
+        x: 114
+        y: 125
+        width: 7
+        height: 3
+      spriteId: 6198183fb4f989147afba3c1126bafff
     linkedCells: []
     parentIndex: -1
   platformSettings:
