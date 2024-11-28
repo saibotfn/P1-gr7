@@ -8,10 +8,11 @@ public class GhostHolder : ScriptableObject
     public bool isRecord;
     public bool isReplay;
     public float recordFrequency;
-    
-    public List<float> timeStamp;
-    public List<Vector2> position;
-    public List<Vector2> rotation;
+    public float finishTime;
+
+    public List<float> timeStamp = new List<float>();
+    public List<Vector2> position = new List<Vector2>();
+    public List<Vector2> rotation = new List<Vector2>();
 
     public void ResetData()
     {

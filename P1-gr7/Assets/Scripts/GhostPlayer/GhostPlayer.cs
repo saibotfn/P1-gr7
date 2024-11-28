@@ -15,7 +15,8 @@ public class GhostPlayer : MonoBehaviour
     private void Awake()
     {
         timeValue = 0;
-        if (ghostHolder.isRecord)
+
+        if (ghostHolder.isRecord) //hides ghost if recording
         {
             GetComponent<Renderer>().enabled = false;
         }
@@ -33,7 +34,7 @@ public class GhostPlayer : MonoBehaviour
     }
     private void GetIndex()
     {
-        for (int i = 0; 1 < ghostHolder.timeStamp.Count - 2; i++)
+        for (int i = 0; i < ghostHolder.timeStamp.Count - 2; i++)
         {
             if (ghostHolder.timeStamp[i] == timeValue)
             {
