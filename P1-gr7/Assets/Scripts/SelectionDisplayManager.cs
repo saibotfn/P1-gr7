@@ -45,6 +45,8 @@ public class SelectionDisplayManager : MonoBehaviour
         }
 
         selectedCharacterIndex = index; // Update selected character
+        PlayerSelections.instance.character = selectedCharacterIndex;
+
         Debug.Log($"Character {index} selected");
 
         // Show the checkmark for the newly selected character
@@ -63,6 +65,9 @@ public class SelectionDisplayManager : MonoBehaviour
         }
 
         selectedCarIndex = index; // Update selected car
+        PlayerSelections.instance.car = selectedCarIndex;
+
+
         Debug.Log($"Car {index} selected");
 
         // Show the checkmark for the newly selected car
@@ -111,7 +116,17 @@ public class SelectionDisplayManager : MonoBehaviour
     // Loads the game scene
     void StartGame()
     {
-        SceneManager.LoadScene("OneDirection"); 
-        Debug.Log("StartGame() called");
+        //PlayerPrefs.SetInt("SelectedCharacter", selectedCharacterIndex);
+        //PlayerPrefs.SetInt("SelectedCar", selectedCarIndex);
+
+        Debug.Log("character index selected:"+selectedCharacterIndex);
+        Debug.Log("car index selected:"+selectedCarIndex);
+
+        PlayerSelections.instance.character = selectedCharacterIndex;
+        PlayerSelections.instance.car = selectedCarIndex;
+
+
+
+        SceneManager.LoadScene("OneDirection");
     }
 }
