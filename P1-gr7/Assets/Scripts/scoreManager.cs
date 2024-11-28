@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class scoreManager : MonoBehaviour
 {
@@ -10,8 +11,7 @@ public class scoreManager : MonoBehaviour
     public int score = 0;
     public TMP_Text scoreText;
 
-
-    void Awake()
+     void Awake()
     {
         if (instance == null)
         {
@@ -47,9 +47,12 @@ public class scoreManager : MonoBehaviour
     }
 
     public void RestartGame()
-    {
-        Time.timeScale = 1; // Resume time
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name); // Reload the current scene
-    }
+ {
+    score = 0; // Reset score
+    updateScoreText(); // Update the UI
+    Time.timeScale = 1; // Resume time
+    UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name); // Reload scene
+}
+
 
 }

@@ -9,7 +9,7 @@ public class FinishLine : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Player crossed the finish line!");
-            FindObjectOfType<scoreManager>().ShowWinScreen(); // Show the Win Screen
+            scoreManager.instance.ShowWinScreen(); // Show the Win Screen
         }
     }
 }
