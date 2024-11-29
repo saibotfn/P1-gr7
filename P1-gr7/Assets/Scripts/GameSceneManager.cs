@@ -8,9 +8,19 @@ public class GameSceneManager : MonoBehaviour
     public GameObject[] characterCarPrefabs; // Prefabs for all character-car combinations
     public Transform playerTransform;        // Reference to the existing Player transform (from TrackSpawner)
 
+    public float speed = 0f;
+    public float maxSpeed = 10f;
+    private Animator animator;
+    SFXManager sFXManager;
+
     [SerializeField] CinemachineVirtualCamera camera;
     
     [SerializeField] TrackGeneration trackSpawner;
+
+    private void Awake()//Henter SFX manager, så lyde kan tilgås
+    {
+        sFXManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SFXManager>();
+    }
 
 
 
@@ -79,5 +89,36 @@ public class GameSceneManager : MonoBehaviour
         }
 
         Debug.Log($"Spawned prefab: {characterCarPrefabs[prefabIndex].name}");
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+    // Hvis bilen rammer en barriere
+    if (collision.gameObject.CompareTag("Barrier"))
+    {
+        Debug.Log("Bilen ramte en barriere. Ingen handling.");
+
+        sFXManager.PlaySFX(sFXManager.BarrierCollision); //Spiller lyd, når man rammer barriere
+
+        return; // Gør intet
+    }
+    // Hvis bilen rammer et objekt, der skal destrueres
+    else if (collision.gameObject.CompareTag("Obstacle"))
+    {
+        Debug.Log("Bilen ramte et objekt: " + collision.gameObject.name);
+
+        // Sænk bilens hastighed
+        speed = Mathf.Clamp(speed - 7f, 0, maxSpeed);
+
+        // Aktivér "Hit"-animation
+        if (animator != null)
+        {
+            animator.SetTrigger("Hit");
+        }
+
+        sFXManager.PlaySFX(sFXManager.CollisionObstacle); //Spiller lyd til collision med sten/skrald/mm
+
+        // Fjern objektet
+        Destroy(collision.gameObject);
+    }
     }
 }

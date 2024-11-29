@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 45994933}
   - component: {fileID: 45994932}
   - component: {fileID: 45994934}
+  - component: {fileID: 45994935}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -182,13 +183,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterCarPrefabs:
-  - {fileID: 6160369782516762953, guid: 8b181709d507a4680aafce7777d71815, type: 3}
   - {fileID: 6160369782516762953, guid: 0323196749b9045809378ce83736dbfb, type: 3}
   - {fileID: 6160369782516762953, guid: 034613d2b8f2a4a11bf93dde693825b2, type: 3}
+  - {fileID: 6160369782516762953, guid: 8b181709d507a4680aafce7777d71815, type: 3}
   - {fileID: 6160369782516762953, guid: e622eb9aec5ce4d23b580bf04c2c224a, type: 3}
   playerTransform: {fileID: 614865943}
+  speed: 0
+  maxSpeed: 10
   camera: {fileID: 753206250}
   trackSpawner: {fileID: 1592319062}
+--- !u!95 &45994935
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45994931}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 473eddc9d77a05c4c86814594e186ddb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &257436327
 GameObject:
   m_ObjectHideFlags: 0
