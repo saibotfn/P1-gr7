@@ -5,13 +5,13 @@ using UnityEngine;
 public class GhostRecorder : MonoBehaviour
 {
     public GhostHolder ghostHolder;
-    //Create another GhostHolder to hold temporary values
+    
     private float timer;
     private float timeValue;
 
     private void Awake()
     {
-        if (ghostHolder.isRecord)
+        if (ghostHolder.isRecord) //Resets data in the lists, timeValue and timer
         {
             ghostHolder.ResetData();
             timeValue = 0;
@@ -24,17 +24,14 @@ public class GhostRecorder : MonoBehaviour
         timer += Time.unscaledDeltaTime;
         timeValue += Time.unscaledDeltaTime;
 
-        if(ghostHolder.isRecord & timer >= 1 / ghostHolder.recordFrequency)
+        if(ghostHolder.isRecord & timer >= 1 / ghostHolder.recordFrequency) //Adds to the lists ghostHolder.recordFrequency/sec
         {
-            //Update the temporary values instead
             ghostHolder.timeStamp.Add(timeValue);
             ghostHolder.position.Add(this.transform.position);
-            ghostHolder.rotation.Add(this.transform.eulerAngles);
+            //ghostHolder.rotation.Add(this.transform.eulerAngles);
 
             timer = 0;
         }
 
     }
 }
-// When ending game compare the ghostHolder temp to the ghostHolder.finishTime
-// If it is less the set the ghostHolder variables to the temp ones

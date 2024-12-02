@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: New Ghost Holder
   m_EditorClassIdentifier: 
   isRecord: 0
-  isReplay: 1
+  isReplay: 0
   recordFrequency: 2
   timeStamp:
   - 7.3840966
@@ -33,12 +33,3 @@ MonoBehaviour:
   - {x: 0.7444081, y: 0}
   - {x: 1.3611441, y: 0}
   - {x: 1.2848252, y: 0}
-  rotation:
-  - {x: -0, y: 0}
-  - {x: -0, y: 0}
-  - {x: -0, y: 0}
-  - {x: -0, y: 0}
-  - {x: -0, y: 0}
-  - {x: -0, y: 0}
-  - {x: -0, y: 0}
-  - {x: -0, y: 0}
