@@ -22,7 +22,6 @@ public class ScenesManager : MonoBehaviour
         StartScreen,
         MainMenu,
         SettingScene,
-        
 
     }
 

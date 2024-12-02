@@ -6,7 +6,6 @@ using UnityEngine.UIElements;
 public class GhostPlayer : MonoBehaviour
 {
     public GhostHolder ghostHolder;
-
     float timeValue;
     int index1;
     int index2;
@@ -16,14 +15,13 @@ public class GhostPlayer : MonoBehaviour
     private void Awake()
     {
         timeValue = 0;
-
-        if (!ghostHolder.isReplay) //hides ghost if not replaying
+        if (ghostHolder.isRecord)
         {
             GetComponent<Renderer>().enabled = false;
         }
     }
 
-    private void Update() //Increments timeValue and calls methods GetIndex() and SetTransform() which moves the ghost car
+    private void Update()
     {
         timeValue += Time.unscaledDeltaTime;
 
@@ -33,7 +31,7 @@ public class GhostPlayer : MonoBehaviour
             SetTransform();
         }
     }
-    private void GetIndex()//For-loop increases the indices
+    private void GetIndex()
     {
         for (int i = 0; i < ghostHolder.timeStamp.Count - 2; i++)
         {
@@ -51,18 +49,17 @@ public class GhostPlayer : MonoBehaviour
             }
         }
 
-        //Sets the indices to the last index 
         index1 = ghostHolder.timeStamp.Count - 1;
         index2 = ghostHolder.timeStamp.Count - 1;
         
                
     }
-    private void SetTransform() //Moves the ghost car according to the position in the list. Uses linear interpolation to calculate the positions between indices ensuring smooth movement
+    private void SetTransform()
     {
         if (index1 == index2)
         {
             this.transform.position = ghostHolder.position[index1];
-            //this.transform.eulerAngles = ghostHolder.rotation[index1];
+            this.transform.eulerAngles = ghostHolder.rotation[index1];
         }
         else
         {
@@ -70,7 +67,7 @@ public class GhostPlayer : MonoBehaviour
                 timeStamp[index1]);
 
             this.transform.position = Vector2.Lerp(ghostHolder.position[index1], ghostHolder.position[index2], interpolationFactor);
-            //this.transform.eulerAngles = Vector2.Lerp(ghostHolder.rotation[index1], ghostHolder.rotation[index2], interpolationFactor);
+            this.transform.eulerAngles = Vector2.Lerp(ghostHolder.rotation[index1], ghostHolder.rotation[index2], interpolationFactor);
         }
     }
     
