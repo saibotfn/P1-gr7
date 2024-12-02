@@ -132,7 +132,7 @@ ScriptedImporter:
       y: 248
       width: 39
       height: 30
-    spriteID: 915502c332a2149c9b530800a52a4cd8
+    spriteID: c292993d064b58f45b1afa6ad190c203
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -152,7 +152,7 @@ ScriptedImporter:
       y: 99
       width: 39
       height: 31
-    spriteID: c333afb29e3c1427f9b0ebf93476ff13
+    spriteID: 8f0adecbb4ecb2144898142c60887c09
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -172,7 +172,7 @@ ScriptedImporter:
       y: 138
       width: 39
       height: 31
-    spriteID: 62a251b2c17fb48b4b81ca4731b1bbbd
+    spriteID: e7044c96336073d439b161f3734115b5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -192,7 +192,7 @@ ScriptedImporter:
       y: 177
       width: 38
       height: 31
-    spriteID: 4854e67ff82ce4bb0bf7d9a5a4156991
+    spriteID: b2ec2457208842042ba332d9b25d9ae7
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -212,7 +212,7 @@ ScriptedImporter:
       y: 461
       width: 40
       height: 31
-    spriteID: 30bb829b3ed534866beef3c0de2b746a
+    spriteID: 63c1bafdc15158f4c8ff751d8288c51a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -232,7 +232,7 @@ ScriptedImporter:
       y: 420
       width: 41
       height: 33
-    spriteID: eb0a2ec49d9334b7dac32d3c9e784f2d
+    spriteID: 454dd3e8e8495734dad0ce335d57cf43
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -252,7 +252,7 @@ ScriptedImporter:
       y: 309
       width: 56
       height: 31
-    spriteID: 85635d214feb3421abd37ba111576197
+    spriteID: 1fc7434fd39faa94b8c9c45bb2cc4c63
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -272,7 +272,7 @@ ScriptedImporter:
       y: 348
       width: 56
       height: 31
-    spriteID: dbf6ca8ab1ec241349a30555d40f1924
+    spriteID: e2b9850d15509bd4dbd4349ed9ac9f3a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -292,7 +292,7 @@ ScriptedImporter:
       y: 346
       width: 74
       height: 54
-    spriteID: 8c04723ae32b14ac1b437ba26e4d2510
+    spriteID: 695661e56ea102348a4d012459f99edb
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -312,7 +312,7 @@ ScriptedImporter:
       y: 408
       width: 74
       height: 54
-    spriteID: cac70f4f7646547c681b161e1d5299ac
+    spriteID: 9e0cdccc5f2d809429ac95369f1cd8dc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -332,7 +332,7 @@ ScriptedImporter:
       y: 280
       width: 76
       height: 58
-    spriteID: 6b96ada45b2e84009a6b31f6f172bd9a
+    spriteID: f49fcbb4732d8434ba84a830e4b54088
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -352,7 +352,7 @@ ScriptedImporter:
       y: 4
       width: 74
       height: 54
-    spriteID: 34424a27432f743b7886b2ad0b974079
+    spriteID: 08cfc71bbf4030d488f115abbf164411
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -372,7 +372,7 @@ ScriptedImporter:
       y: 4
       width: 76
       height: 61
-    spriteID: 8df9ccbb4859447c8b30fecb37c2112f
+    spriteID: 68fe13b874b16b54bafd1b0804007f4d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -392,7 +392,7 @@ ScriptedImporter:
       y: 66
       width: 74
       height: 54
-    spriteID: ff61c2645db03488c9381274e9e2fc4d
+    spriteID: 210205bd103c96a4dbfffcffe84818f8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -412,7 +412,7 @@ ScriptedImporter:
       y: 73
       width: 76
       height: 61
-    spriteID: d3f70876391ec474ab8df48aa22a7ca2
+    spriteID: a0694b3b8135ce340a81ba5babfc8865
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -432,7 +432,7 @@ ScriptedImporter:
       y: 128
       width: 74
       height: 54
-    spriteID: fe4f336107c2246d29afab1d019646a9
+    spriteID: deb47c2d93336df469d264f44d000a13
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -452,7 +452,7 @@ ScriptedImporter:
       y: 142
       width: 76
       height: 61
-    spriteID: 2582617d7218a4c2bb65c1dd21f90b70
+    spriteID: d6b1c2f99bd86a6408d7949d2df9a8fd
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -472,7 +472,7 @@ ScriptedImporter:
       y: 190
       width: 74
       height: 54
-    spriteID: bf029a7e0580546b294b242983f625d1
+    spriteID: 4322c14fc4ffc4348be2b1a278099ab9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -492,7 +492,7 @@ ScriptedImporter:
       y: 211
       width: 76
       height: 61
-    spriteID: 007d70151e35c4fdc8bbdcc321da58a8
+    spriteID: cb9dd0d99666546409f2c1573fdbcb8a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -512,7 +512,7 @@ ScriptedImporter:
       y: 252
       width: 74
       height: 49
-    spriteID: c64953520fbb7453e8f7785c52b8b3d1
+    spriteID: 7ef623707efa6fd4d81389e764d02c4b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -532,7 +532,7 @@ ScriptedImporter:
       y: 4
       width: 76
       height: 48
-    spriteID: 62b33a9ccefc0457eb931424cc06ffdd
+    spriteID: 9e04951402826524f88869188b74361f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -552,7 +552,7 @@ ScriptedImporter:
       y: 470
       width: 74
       height: 36
-    spriteID: c7e60853d7b9b4d2a8b15d0d2e9f7839
+    spriteID: 2df00074d5fc90746bc89e757ba3137e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -572,7 +572,7 @@ ScriptedImporter:
       y: 60
       width: 76
       height: 31
-    spriteID: 0e909274710e7489db32d11254863af5
+    spriteID: 9203aae426c157b4fad040cdb677a831
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -592,7 +592,7 @@ ScriptedImporter:
       y: 387
       width: 61
       height: 25
-    spriteID: 9ae494b12b53d47ed9e1d4505480e1ae
+    spriteID: 40112e07ee1e7b5408425096346a93af
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -612,7 +612,7 @@ ScriptedImporter:
       y: 216
       width: 49
       height: 24
-    spriteID: 28e1f490ca46e4e7d8baec45877256cd
+    spriteID: 52b415dff5ca0aa4aafa3008433dc364
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -632,7 +632,7 @@ ScriptedImporter:
       y: 286
       width: 46
       height: 21
-    spriteID: 8bfbf942bdf61400f9bdc8d6fdc70b2b
+    spriteID: a6f55e2c4285c3247b165429dc1dfd17
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -652,7 +652,7 @@ ScriptedImporter:
       y: 248
       width: 31
       height: 17
-    spriteID: 432e8a462526f4a1b99146a7ea436f6f
+    spriteID: 2beb88e8d52b762408793ddb6f539c69
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -672,7 +672,7 @@ ScriptedImporter:
       y: 99
       width: 26
       height: 10
-    spriteID: b10b6ed5887fe4cbcb107a77805e9db8
+    spriteID: 8bea70e572a4e894b841abd8457f0077
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -692,7 +692,7 @@ ScriptedImporter:
       y: 117
       width: 28
       height: 7
-    spriteID: 935c7808a880642f4af14be66a020dcc
+    spriteID: fb7f2eb24182aaa429fe94cc26766f63
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -712,7 +712,7 @@ ScriptedImporter:
       y: 273
       width: 7
       height: 2
-    spriteID: 262e8874d687c492aa4ba61b063a93c2
+    spriteID: c84a953cafbbfd1499a98c4e83051049
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -721,26 +721,6 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 217, y: 273}
-  - name: 3 Birds animation_Frame_30
-    originalName: 
-    pivot: {x: 0, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 251
-      y: 99
-      width: 0
-      height: 0
-    spriteID: 0bb47ed8b805d462c92fa9957716a99e
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 244, y: 96}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -750,7 +730,7 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: 3 Birds animation_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -758,8 +738,8 @@ ScriptedImporter:
         y: 8
         width: 39
         height: 30
-      spriteId: 915502c332a2149c9b530800a52a4cd8
-    - name: 3 Birds animation_Frame_1
+      spriteId: c292993d064b58f45b1afa6ad190c203
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -767,8 +747,8 @@ ScriptedImporter:
         y: 7
         width: 39
         height: 31
-      spriteId: c333afb29e3c1427f9b0ebf93476ff13
-    - name: 3 Birds animation_Frame_2
+      spriteId: 8f0adecbb4ecb2144898142c60887c09
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -776,8 +756,8 @@ ScriptedImporter:
         y: 7
         width: 39
         height: 31
-      spriteId: 62a251b2c17fb48b4b81ca4731b1bbbd
-    - name: 3 Birds animation_Frame_3
+      spriteId: e7044c96336073d439b161f3734115b5
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -785,8 +765,8 @@ ScriptedImporter:
         y: 7
         width: 38
         height: 31
-      spriteId: 4854e67ff82ce4bb0bf7d9a5a4156991
-    - name: 3 Birds animation_Frame_4
+      spriteId: b2ec2457208842042ba332d9b25d9ae7
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -794,8 +774,8 @@ ScriptedImporter:
         y: 7
         width: 40
         height: 31
-      spriteId: 30bb829b3ed534866beef3c0de2b746a
-    - name: 3 Birds animation_Frame_5
+      spriteId: 63c1bafdc15158f4c8ff751d8288c51a
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -803,8 +783,8 @@ ScriptedImporter:
         y: 7
         width: 41
         height: 33
-      spriteId: eb0a2ec49d9334b7dac32d3c9e784f2d
-    - name: 3 Birds animation_Frame_6
+      spriteId: 454dd3e8e8495734dad0ce335d57cf43
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -812,8 +792,8 @@ ScriptedImporter:
         y: 11
         width: 56
         height: 31
-      spriteId: 85635d214feb3421abd37ba111576197
-    - name: 3 Birds animation_Frame_7
+      spriteId: 1fc7434fd39faa94b8c9c45bb2cc4c63
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -821,8 +801,8 @@ ScriptedImporter:
         y: 12
         width: 56
         height: 31
-      spriteId: dbf6ca8ab1ec241349a30555d40f1924
-    - name: 3 Birds animation_Frame_8
+      spriteId: e2b9850d15509bd4dbd4349ed9ac9f3a
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -830,8 +810,8 @@ ScriptedImporter:
         y: 11
         width: 74
         height: 54
-      spriteId: 8c04723ae32b14ac1b437ba26e4d2510
-    - name: 3 Birds animation_Frame_9
+      spriteId: 695661e56ea102348a4d012459f99edb
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -839,8 +819,8 @@ ScriptedImporter:
         y: 16
         width: 74
         height: 54
-      spriteId: cac70f4f7646547c681b161e1d5299ac
-    - name: 3 Birds animation_Frame_10
+      spriteId: 9e0cdccc5f2d809429ac95369f1cd8dc
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -848,8 +828,8 @@ ScriptedImporter:
         y: 14
         width: 76
         height: 58
-      spriteId: 6b96ada45b2e84009a6b31f6f172bd9a
-    - name: 3 Birds animation_Frame_11
+      spriteId: f49fcbb4732d8434ba84a830e4b54088
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -857,8 +837,8 @@ ScriptedImporter:
         y: 18
         width: 74
         height: 54
-      spriteId: 34424a27432f743b7886b2ad0b974079
-    - name: 3 Birds animation_Frame_12
+      spriteId: 08cfc71bbf4030d488f115abbf164411
+    - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
@@ -866,8 +846,8 @@ ScriptedImporter:
         y: 23
         width: 76
         height: 61
-      spriteId: 8df9ccbb4859447c8b30fecb37c2112f
-    - name: 3 Birds animation_Frame_13
+      spriteId: 68fe13b874b16b54bafd1b0804007f4d
+    - name: Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
@@ -875,8 +855,8 @@ ScriptedImporter:
         y: 37
         width: 74
         height: 54
-      spriteId: ff61c2645db03488c9381274e9e2fc4d
-    - name: 3 Birds animation_Frame_14
+      spriteId: 210205bd103c96a4dbfffcffe84818f8
+    - name: Frame_14
       frameIndex: 14
       additiveSortOrder: 0
       cellRect:
@@ -884,8 +864,8 @@ ScriptedImporter:
         y: 35
         width: 76
         height: 61
-      spriteId: d3f70876391ec474ab8df48aa22a7ca2
-    - name: 3 Birds animation_Frame_15
+      spriteId: a0694b3b8135ce340a81ba5babfc8865
+    - name: Frame_15
       frameIndex: 15
       additiveSortOrder: 0
       cellRect:
@@ -893,8 +873,8 @@ ScriptedImporter:
         y: 50
         width: 74
         height: 54
-      spriteId: fe4f336107c2246d29afab1d019646a9
-    - name: 3 Birds animation_Frame_16
+      spriteId: deb47c2d93336df469d264f44d000a13
+    - name: Frame_16
       frameIndex: 16
       additiveSortOrder: 0
       cellRect:
@@ -902,8 +882,8 @@ ScriptedImporter:
         y: 51
         width: 76
         height: 61
-      spriteId: 2582617d7218a4c2bb65c1dd21f90b70
-    - name: 3 Birds animation_Frame_17
+      spriteId: d6b1c2f99bd86a6408d7949d2df9a8fd
+    - name: Frame_17
       frameIndex: 17
       additiveSortOrder: 0
       cellRect:
@@ -911,8 +891,8 @@ ScriptedImporter:
         y: 63
         width: 74
         height: 54
-      spriteId: bf029a7e0580546b294b242983f625d1
-    - name: 3 Birds animation_Frame_18
+      spriteId: 4322c14fc4ffc4348be2b1a278099ab9
+    - name: Frame_18
       frameIndex: 18
       additiveSortOrder: 0
       cellRect:
@@ -920,8 +900,8 @@ ScriptedImporter:
         y: 66
         width: 76
         height: 61
-      spriteId: 007d70151e35c4fdc8bbdcc321da58a8
-    - name: 3 Birds animation_Frame_19
+      spriteId: cb9dd0d99666546409f2c1573fdbcb8a
+    - name: Frame_19
       frameIndex: 19
       additiveSortOrder: 0
       cellRect:
@@ -929,8 +909,8 @@ ScriptedImporter:
         y: 79
         width: 74
         height: 49
-      spriteId: c64953520fbb7453e8f7785c52b8b3d1
-    - name: 3 Birds animation_Frame_20
+      spriteId: 7ef623707efa6fd4d81389e764d02c4b
+    - name: Frame_20
       frameIndex: 20
       additiveSortOrder: 0
       cellRect:
@@ -938,8 +918,8 @@ ScriptedImporter:
         y: 80
         width: 76
         height: 48
-      spriteId: 62b33a9ccefc0457eb931424cc06ffdd
-    - name: 3 Birds animation_Frame_21
+      spriteId: 9e04951402826524f88869188b74361f
+    - name: Frame_21
       frameIndex: 21
       additiveSortOrder: 0
       cellRect:
@@ -947,8 +927,8 @@ ScriptedImporter:
         y: 92
         width: 74
         height: 36
-      spriteId: c7e60853d7b9b4d2a8b15d0d2e9f7839
-    - name: 3 Birds animation_Frame_22
+      spriteId: 2df00074d5fc90746bc89e757ba3137e
+    - name: Frame_22
       frameIndex: 22
       additiveSortOrder: 0
       cellRect:
@@ -956,8 +936,8 @@ ScriptedImporter:
         y: 97
         width: 76
         height: 31
-      spriteId: 0e909274710e7489db32d11254863af5
-    - name: 3 Birds animation_Frame_23
+      spriteId: 9203aae426c157b4fad040cdb677a831
+    - name: Frame_23
       frameIndex: 23
       additiveSortOrder: 0
       cellRect:
@@ -965,8 +945,8 @@ ScriptedImporter:
         y: 103
         width: 61
         height: 25
-      spriteId: 9ae494b12b53d47ed9e1d4505480e1ae
-    - name: 3 Birds animation_Frame_24
+      spriteId: 40112e07ee1e7b5408425096346a93af
+    - name: Frame_24
       frameIndex: 24
       additiveSortOrder: 0
       cellRect:
@@ -974,8 +954,8 @@ ScriptedImporter:
         y: 104
         width: 49
         height: 24
-      spriteId: 28e1f490ca46e4e7d8baec45877256cd
-    - name: 3 Birds animation_Frame_25
+      spriteId: 52b415dff5ca0aa4aafa3008433dc364
+    - name: Frame_25
       frameIndex: 25
       additiveSortOrder: 0
       cellRect:
@@ -983,8 +963,8 @@ ScriptedImporter:
         y: 107
         width: 46
         height: 21
-      spriteId: 8bfbf942bdf61400f9bdc8d6fdc70b2b
-    - name: 3 Birds animation_Frame_26
+      spriteId: a6f55e2c4285c3247b165429dc1dfd17
+    - name: Frame_26
       frameIndex: 26
       additiveSortOrder: 0
       cellRect:
@@ -992,8 +972,8 @@ ScriptedImporter:
         y: 111
         width: 31
         height: 17
-      spriteId: 432e8a462526f4a1b99146a7ea436f6f
-    - name: 3 Birds animation_Frame_27
+      spriteId: 2beb88e8d52b762408793ddb6f539c69
+    - name: Frame_27
       frameIndex: 27
       additiveSortOrder: 0
       cellRect:
@@ -1001,8 +981,8 @@ ScriptedImporter:
         y: 118
         width: 26
         height: 10
-      spriteId: b10b6ed5887fe4cbcb107a77805e9db8
-    - name: 3 Birds animation_Frame_28
+      spriteId: 8bea70e572a4e894b841abd8457f0077
+    - name: Frame_28
       frameIndex: 28
       additiveSortOrder: 0
       cellRect:
@@ -1010,8 +990,8 @@ ScriptedImporter:
         y: 121
         width: 28
         height: 7
-      spriteId: 935c7808a880642f4af14be66a020dcc
-    - name: 3 Birds animation_Frame_29
+      spriteId: fb7f2eb24182aaa429fe94cc26766f63
+    - name: Frame_29
       frameIndex: 29
       additiveSortOrder: 0
       cellRect:
@@ -1019,19 +999,22 @@ ScriptedImporter:
         y: 126
         width: 7
         height: 2
-      spriteId: 262e8874d687c492aa4ba61b063a93c2
-    - name: 3 Birds animation_Frame_30
-      frameIndex: 30
-      additiveSortOrder: 0
-      cellRect:
-        x: 114
-        y: 125
-        width: 7
-        height: 3
-      spriteId: 0bb47ed8b805d462c92fa9957716a99e
+      spriteId: c84a953cafbbfd1499a98c4e83051049
     linkedCells: []
     parentIndex: -1
-  platformSettings: []
+  platformSettings:
+  - name: Default
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 

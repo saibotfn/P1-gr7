@@ -6,10 +6,10 @@ public class FinishLine : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player")) // Check if the player crosses the finish line
         {
             Debug.Log("Player crossed the finish line!");
-            scoreManager.instance.ShowWinScreen(); // Show the Win Screen
+            // Add your win logic here (e.g., show UI, stop the game)
         }
     }
 }
