@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 5238317036311726103}
   - component: {fileID: -3573073144255200625}
   - component: {fileID: 7620639126063709952}
+  - component: {fileID: 3376864924622404137}
   m_Layer: 0
   m_Name: Char0&Car0
   m_TagString: Untagged
@@ -352,3 +353,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointsPerUnit: 5
   pointsDisplay: {fileID: 0}
+--- !u!114 &3376864924622404137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633761010374998712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b804d3f4b07b43419b385441ea863aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ghostHolder: {fileID: 11400000, guid: 9acaed8818088b84493addd1aba00384, type: 2}

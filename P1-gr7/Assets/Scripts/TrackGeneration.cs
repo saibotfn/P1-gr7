@@ -14,6 +14,7 @@ public class TrackGeneration : MonoBehaviour
     private float spawnPosTrack = 0.0f; //The spawn position of the track
     private bool finishSpawned = false; //Makes sure finish only spawns once
     public DrivePoints drivePoints; // Reference to the DrivePoints script
+    public GhostHolder ghostHolder;
 
     void Start()
     {
@@ -37,7 +38,7 @@ public class TrackGeneration : MonoBehaviour
             }
 
             // Spawn finish line when points reach threshold
-            if (drivePoints.GetPoints() >= 3000 && !finishSpawned)
+            if (drivePoints.GetPoints() >= 100 && !finishSpawned) //Change to 3000!!!!!
             {
                 SpawnFinish();
             }
@@ -46,9 +47,10 @@ public class TrackGeneration : MonoBehaviour
     void SpawnFinish()
      {
         Vector3 finishLinePosition = new Vector3(0, spawnPosTrack, 0);
-        Instantiate(finishLinePrefabs, finishLinePosition, Quaternion.identity);
+        GameObject finishLine = Instantiate(finishLinePrefabs, finishLinePosition, Quaternion.identity);
         finishSpawned = true;
         Debug.Log("Finish line spawned at: " + finishLinePosition);
+        finishLine.GetComponent<FinishLine>().ghostHolder = ghostHolder;
     }
     void SpawnTrackPiece()
     {

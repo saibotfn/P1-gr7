@@ -12,6 +12,7 @@ public class GameSceneManager : MonoBehaviour
     public float maxSpeed = 10f;
     private Animator animator;
     SFXManager sFXManager;
+    private GhostHolder ghostHolder;
 
     [SerializeField] CinemachineVirtualCamera camera;
     
@@ -75,9 +76,12 @@ public class GameSceneManager : MonoBehaviour
         // Spawn the selected prefab at the position of the existing player transform
         GameObject player = Instantiate(characterCarPrefabs[prefabIndex], playerTransform.position, playerTransform.rotation);
 
+        ghostHolder = player.GetComponent<GhostRecorder>().ghostHolder;
+
         camera.Follow = player.transform;
         trackSpawner.player = player.transform;
         trackSpawner.drivePoints = player.GetComponent<DrivePoints>();
+        trackSpawner.ghostHolder = ghostHolder;
 
         // Optionally, parent the new player object to the TrackSpawner, if needed
         player.transform.parent = playerTransform.parent;
