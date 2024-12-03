@@ -15,7 +15,7 @@ public class TrackGeneration : MonoBehaviour
     private bool finishSpawned = false; //Makes sure finish only spawns once
     public DrivePoints drivePoints; // Reference to the DrivePoints script
     public GhostHolder ghostHolder;
-    // make variable for both ghostholders
+    //If working on implementing ghost play on 2 levels: make variable for both ghostholders
 
     void Start()
     {
@@ -52,9 +52,9 @@ public class TrackGeneration : MonoBehaviour
         finishSpawned = true;
         Debug.Log("Finish line spawned at: " + finishLinePosition);
         finishLine.GetComponent<FinishLine>().ghostHolder = ghostHolder;
-        //FinishLine finish =  finishLine.GetComponent<FinishLine>();
-        // ghostHolderLevel1 =  finish.ghostHolderLevel1
-        // ghostHolderLevel2 =  finish.ghostHolderLevel2
+        //If working on implementing ghost play on 2 levels: FinishLine finish =  finishLine.GetComponent<FinishLine>();
+        //If working on implementing ghost play on 2 levels: ghostHolderLevel1 =  finish.ghostHolderLevel1
+        //If working on implementing ghost play on 2 levels: ghostHolderLevel2 =  finish.ghostHolderLevel2
     }
     void SpawnTrackPiece()
     {
