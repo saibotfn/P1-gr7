@@ -5,6 +5,7 @@ using UnityEngine;
 public class GhostRecorder : MonoBehaviour
 {
     public GhostHolder ghostHolder;
+    //Create ghostHolder for level 1 and 2
     
     private float timer;
     private float timeValue;

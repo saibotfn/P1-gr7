@@ -13,6 +13,7 @@ public class GameSceneManager : MonoBehaviour
     private Animator animator;
     SFXManager sFXManager;
     private GhostHolder ghostHolder;
+    //Create ghostHolder for level 1 and 2
 
     [SerializeField] CinemachineVirtualCamera camera;
     
@@ -77,11 +78,12 @@ public class GameSceneManager : MonoBehaviour
         GameObject player = Instantiate(characterCarPrefabs[prefabIndex], playerTransform.position, playerTransform.rotation);
 
         ghostHolder = player.GetComponent<GhostRecorder>().ghostHolder;
-
+        // get both of the ghostHolders
         camera.Follow = player.transform;
         trackSpawner.player = player.transform;
         trackSpawner.drivePoints = player.GetComponent<DrivePoints>();
         trackSpawner.ghostHolder = ghostHolder;
+        //Set both ghost holders in the track generation script
 
         // Optionally, parent the new player object to the TrackSpawner, if needed
         player.transform.parent = playerTransform.parent;
