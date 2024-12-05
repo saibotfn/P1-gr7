@@ -19,10 +19,10 @@ public class GameSceneManager : MonoBehaviour
     
     [SerializeField] TrackGeneration trackSpawner;
 
-    private void Awake()//Henter SFX manager, så lyde kan tilgås
-    {
-        sFXManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SFXManager>();
-    }
+    //private void Awake()//Henter SFX manager, så lyde kan tilgås
+    //{
+    //    sFXManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SFXManager>();
+    //}
 
 
 
