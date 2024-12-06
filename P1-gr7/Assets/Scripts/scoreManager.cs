@@ -13,6 +13,7 @@ public class scoreManager : MonoBehaviour
 
     void Awake()
     {
+        Debug.Log(score);
         if (instance == null)
         {
             instance = this;
