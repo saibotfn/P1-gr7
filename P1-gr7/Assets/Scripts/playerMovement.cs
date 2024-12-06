@@ -81,7 +81,7 @@ public class playerMovement : MonoBehaviour
             animator.SetTrigger("Hit");
         }
 
-        sFXManager.PlaySFX(sFXManager.CollisionObstacle); //Spiller lyd til collision med sten/skrald/mm
+        // sFXManager.PlaySFX(sFXManager.CollisionObstacle); //Spiller lyd til collision med sten/skrald/mm
 
         // Fjern objektet
         Destroy(collision.gameObject);

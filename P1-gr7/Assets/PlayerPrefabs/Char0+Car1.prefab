@@ -72,10 +72,6 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 0d3bb59917f824911bdb3298bbe261bf, type: 2}
-    - target: {fileID: 7932949954544516860, guid: 6cf080eca167f4f34a07fdabf5e75d5f, type: 3}
-      propertyPath: ghostHolder
-      value: 
-      objectReference: {fileID: 11400000, guid: 9acaed8818088b84493addd1aba00384, type: 2}
     m_RemovedComponents:
     - {fileID: 3045775823549686398, guid: 6cf080eca167f4f34a07fdabf5e75d5f, type: 3}
     m_RemovedGameObjects: []
@@ -83,17 +79,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3273299035660920443, guid: 6cf080eca167f4f34a07fdabf5e75d5f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4797512435292231702}
-    - targetCorrespondingSourceObject: {fileID: 3273299035660920443, guid: 6cf080eca167f4f34a07fdabf5e75d5f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: -1287161643299166006}
+      addedObject: {fileID: 1347713682520333611}
   m_SourcePrefab: {fileID: 100100000, guid: 6cf080eca167f4f34a07fdabf5e75d5f, type: 3}
 --- !u!1 &6160369782516762953 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3273299035660920443, guid: 6cf080eca167f4f34a07fdabf5e75d5f, type: 3}
   m_PrefabInstance: {fileID: 8652293998549200690}
   m_PrefabAsset: {fileID: 0}
---- !u!61 &4797512435292231702
+--- !u!61 &1347713682520333611
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,7 +118,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0057100356, y: -0.004758388}
+  m_Offset: {x: -0.00765267, y: -0.01052244}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -136,18 +129,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.27455717, y: 0.5200891}
+  m_Size: {x: 0.2688452, y: 0.5156441}
   m_EdgeRadius: 0
---- !u!114 &-1287161643299166006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6160369782516762953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b804d3f4b07b43419b385441ea863aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ghostHolder: {fileID: 0}
