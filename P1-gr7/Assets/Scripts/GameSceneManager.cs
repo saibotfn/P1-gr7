@@ -12,15 +12,17 @@ public class GameSceneManager : MonoBehaviour
     public float maxSpeed = 10f;
     private Animator animator;
     SFXManager sFXManager;
+    private GhostHolder ghostHolder;
+    //If working on implementing ghost play on 2 levels: Create ghostHolder for level 1 and 2
 
     [SerializeField] CinemachineVirtualCamera camera;
     
     [SerializeField] TrackGeneration trackSpawner;
 
-    private void Awake()//Henter SFX manager, så lyde kan tilgås
-    {
-        sFXManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SFXManager>();
-    }
+    //private void Awake()//Henter SFX manager, så lyde kan tilgås
+    //{
+    //    sFXManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SFXManager>();
+    //}
 
 
 
@@ -75,9 +77,13 @@ public class GameSceneManager : MonoBehaviour
         // Spawn the selected prefab at the position of the existing player transform
         GameObject player = Instantiate(characterCarPrefabs[prefabIndex], playerTransform.position, playerTransform.rotation);
 
+        ghostHolder = player.GetComponent<GhostRecorder>().ghostHolder;
+        //If working on implementing ghost play on 2 levels: get both of the ghostHolders
         camera.Follow = player.transform;
         trackSpawner.player = player.transform;
         trackSpawner.drivePoints = player.GetComponent<DrivePoints>();
+        trackSpawner.ghostHolder = ghostHolder;
+        //If working on implementing ghost play on 2 levels: Set both ghost holders in the track generation script
 
         // Optionally, parent the new player object to the TrackSpawner, if needed
         player.transform.parent = playerTransform.parent;

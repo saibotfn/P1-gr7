@@ -34,7 +34,7 @@ public class ButtonSceneLoader : MonoBehaviour
                 ScenesManager.Instance.LoadNextScene();
                 break;
             case Action.LoadMainMenu:
-                ScenesManager.Instance.LoadMainMenu();
+                ScenesManager.Instance.LoadStartScreen();
                 break;
         }
     }
