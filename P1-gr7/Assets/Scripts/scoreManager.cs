@@ -13,6 +13,7 @@ public class scoreManager : MonoBehaviour
 
     void Awake()
     {
+        Debug.Log(score);
         if (instance == null)
         {
             instance = this;
@@ -37,4 +38,22 @@ public class scoreManager : MonoBehaviour
             scoreText.text = "Coins: " + score.ToString();
         }
     }
+       public GameObject winScreen; // Reference to the Win Screen Canvas
+
+    public void ShowWinScreen()
+    {
+        if (winScreen != null)
+        {
+            winScreen.SetActive(true); // Activate the Win Screen
+        }
+        Time.timeScale = 0; // Pause the game (optional)
+    }
+
+    public void RestartGame()
+ {
+    score = 0; // Reset score
+    updateScoreText(); // Update the UI
+    Time.timeScale = 1; // Resume time
+    UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name); // Reload scene
+}
 }
