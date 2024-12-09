@@ -2,20 +2,19 @@ using UnityEngine;
 
 public class FollowPlayerY : MonoBehaviour
 {
-    public Transform player; // Referencen til spillerens transform
-    public float fixedXPosition = 0f; // Den faste x-position for kameraet
-    public float offsetY = 2f; // En valgfri offset i y-retningen
-
-    void LateUpdate()
+    public class CameraFollowY : MonoBehaviour
     {
-        if (player != null)
+        public Transform player; // Reference to the player's transform
+        public float yOffset = 1f; // Offset to keep the player in the top lower third
+
+        void Update()
         {
-            // Følg spillerens y-position og bevar x-positionen fast
-            transform.position = new Vector3(
-                fixedXPosition, 
-                player.position.y + offsetY, 
-                transform.position.z
-            );
+            if (player != null)
+            {
+                // Calculate the new camera position
+                float newYPosition = player.position.y + yOffset;
+                transform.position = new Vector3(transform.position.x, newYPosition, transform.position.z);
+            }
         }
     }
 }

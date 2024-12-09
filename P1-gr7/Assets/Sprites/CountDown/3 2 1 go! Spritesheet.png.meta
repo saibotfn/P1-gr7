@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 460dfe9da3851634aa178536e4895088
+guid: ffdef936220ebdf4e988fe2bfa5a0878
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -37,9 +37,9 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 96
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,19 +72,6 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -94,7 +81,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: iPhone
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -123,127 +110,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Road pieces and bigger road_0
+      name: 3 2 1 go! Spritesheet_0
       rect:
         serializedVersion: 2
-        x: 159
-        y: 1759
-        width: 322
-        height: 642
+        x: 30
+        y: 30
+        width: 201
+        height: 98
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b79f972a80f644b42ae11065b358882d
-      internalID: -1750551826
+      spriteID: 08d2dcd7a8526244b9be1cfe2f6f27c8
+      internalID: 223759927
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Road pieces and bigger road_1
+      name: 3 2 1 go! Spritesheet_1
       rect:
         serializedVersion: 2
-        x: 639
-        y: 1759
-        width: 322
-        height: 642
+        x: 31
+        y: 143
+        width: 68
+        height: 99
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9693ed37c55105041999d394eb8c0ef0
-      internalID: 1914115114
+      spriteID: 33b234f4b5a64bc4897ec5658a114a79
+      internalID: 2146238172
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Road pieces and bigger road_2
+      name: 3 2 1 go! Spritesheet_2
       rect:
         serializedVersion: 2
-        x: 1119
-        y: 1759
-        width: 322
-        height: 642
+        x: 108
+        y: 140
+        width: 72
+        height: 105
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef6a59efc3be3fb4a8976b98eda61a80
-      internalID: -460919706
+      spriteID: 9b6419a428c23754bbf993a831b146b9
+      internalID: 1362336531
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Road pieces and bigger road_3
+      name: 3 2 1 go! Spritesheet_3
       rect:
         serializedVersion: 2
-        x: 1599
-        y: 1759
-        width: 322
-        height: 642
+        x: 192
+        y: 143
+        width: 63
+        height: 101
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df85b6e0520ff0b429dbc86fe3ed2687
-      internalID: -482599048
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Road pieces and bigger road_4
-      rect:
-        serializedVersion: 2
-        x: 2079
-        y: 1759
-        width: 162
-        height: 642
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6d59318d631c4e14eab4ab8b1c118ab9
-      internalID: -1198072593
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Road pieces and bigger road_5
-      rect:
-        serializedVersion: 2
-        x: 315
-        y: 160
-        width: 1922
-        height: 1281
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 2, z: 0, w: 3}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 54dd947beee171245afb9685a3fc2dd5
-      internalID: 442001268
+      spriteID: 40e3f7ad452537b448821171fb062f88
+      internalID: 803349931
       vertices: []
       indices: 
       edges: []
@@ -259,12 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Road pieces and bigger road_0: -1750551826
-      Road pieces and bigger road_1: 1914115114
-      Road pieces and bigger road_2: -460919706
-      Road pieces and bigger road_3: -482599048
-      Road pieces and bigger road_4: -1198072593
-      Road pieces and bigger road_5: 442001268
+      3 2 1 go! Spritesheet_0: 223759927
+      3 2 1 go! Spritesheet_1: 2146238172
+      3 2 1 go! Spritesheet_2: 1362336531
+      3 2 1 go! Spritesheet_3: 803349931
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
