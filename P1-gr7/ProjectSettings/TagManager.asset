@@ -56,6 +56,9 @@ TagManager:
   - name: Player
     uniqueID: 415357277
     locked: 0
+  - name: Finish line
+    uniqueID: 659212805
+    locked: 0
   - name: UI
     uniqueID: 3030857449
     locked: 0
