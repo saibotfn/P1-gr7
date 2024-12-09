@@ -6,7 +6,6 @@ public class Coin : MonoBehaviour
 {
     public int coinValue = 1;
 
-    //public AudioSource coinSound;
     SFXManager sFXManager;
 
     private void Awake()
@@ -20,6 +19,7 @@ public class Coin : MonoBehaviour
             Debug.Log("Player touched a coin");
             scoreManager.instance.addScore(coinValue);
 
+            //Checks if there is sound to play and plays the sound clip if there is
             if (sFXManager == null)
             {
                 Debug.LogError("SFXManager is null.");
