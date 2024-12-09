@@ -8,7 +8,6 @@ public class ScenesManager : MonoBehaviour
 
     public static ScenesManager Instance;
 
-
     public int CurrentSceneIndex { get; private set; }
 
     private void Awake()
@@ -46,7 +45,7 @@ public class ScenesManager : MonoBehaviour
     public void LoadStartScreen()
     {
         SceneManager.LoadScene(Scene.StartScreen.ToString());
-        Debug.Log("Button is pressed");
+        //Debug.Log("Button is pressed");
     }
 
     public void LoadSettingScene()

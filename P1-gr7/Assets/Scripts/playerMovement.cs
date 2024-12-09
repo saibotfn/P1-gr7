@@ -17,9 +17,8 @@ public class playerMovement : MonoBehaviour
 
     private void Awake()//Henter SFX manager, så lyde kan tilgås
     {
-        sFXManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SFXManager>();
+        sFXManager = FindObjectOfType<SFXManager>();
     }
-
     void Start()
     {
         // S�rg for at bilen starter med den rigtige rotation (peger opad)
@@ -81,7 +80,7 @@ public class playerMovement : MonoBehaviour
             animator.SetTrigger("Hit");
         }
 
-        // sFXManager.PlaySFX(sFXManager.CollisionObstacle); //Spiller lyd til collision med sten/skrald/mm
+        sFXManager.PlaySFX(sFXManager.CollisionObstacle); //Spiller lyd til collision med sten/skrald/mm
 
         // Fjern objektet
         Destroy(collision.gameObject);
