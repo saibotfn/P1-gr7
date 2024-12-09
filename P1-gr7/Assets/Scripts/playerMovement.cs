@@ -9,24 +9,42 @@ public class playerMovement : MonoBehaviour
     public float maxSpeed = 10f;   // Maksimal hastighed
     public float acceleration = 4f; // Hvor hurtigt bilen accelererer
     public float deceleration = 7f; // Hvor hurtigt bilen bremser
-    public float verticalSpeed = 13f;   // Sidel�ns hastighed
+    public float verticalSpeed = 13f;   // Sidelæns hastighed
     public float horizontalSpeed = 6f; // speed of swerving
-    private Animator animator;      //s�tter animatoren op s� bilen kan dreje rundt
+    private Animator animator;      //sætter animatoren op så bilen kan dreje rundt
     private float currentSpeed;
 
-    private float horizontalInput; // Input til sidel�ns bev�gelse
+    private float horizontalInput; // Input til sidelæns bevægelse
     SFXManager sFXManager;
+
+    private bool canMove = false; // Flag to control movement
 
     void Start()
     {
-        // S�rg for at bilen starter med den rigtige rotation (peger opad)
-        transform.rotation = Quaternion.Euler(0, 0, 0); // S�t rotationen til 0 p� Z-aksen (peger opad)
+        // Sørg for at bilen starter med den rigtige rotation (peger opad)
+        transform.rotation = Quaternion.Euler(0, 0, 0); // Sæt rotationen til 0 på Z-aksen (peger opad)
         animator = GetComponent<Animator>(); //Finder animator componenten frem
         currentSpeed = verticalSpeed;
+
+        // Initialize SFXManager if needed
+        sFXManager = FindObjectOfType<SFXManager>();
+
+        // Start the coroutine to enable movement after 4 seconds
+        StartCoroutine(EnableMovementAfterDelay(4f));
+    }
+
+    IEnumerator EnableMovementAfterDelay(float delay)
+    {
+        // Wait for the specified delay
+        yield return new WaitForSeconds(delay);
+        // Enable movement
+        canMove = true;
     }
 
     private void Update()
     {
+        if (!canMove) return; // Prevent movement if canMove is false
+
         // Adjust speed based on input
         if (Input.GetKey(KeyCode.Period))
         {
@@ -55,8 +73,6 @@ public class playerMovement : MonoBehaviour
                     currentSpeed = verticalSpeed;
                 }
             }
-
-
         }
         transform.Translate(Vector3.up * currentSpeed * Time.deltaTime);
 
@@ -65,39 +81,6 @@ public class playerMovement : MonoBehaviour
         transform.Translate(Vector3.right * horizontalInput * horizontalSpeed * Time.deltaTime);
     }
 
-
-
-
-    //void Update()
-    //{
-    //    // Input til sidel�ns bev�gelse (A/D eller piletasterne venstre/h�jre)
-    //    horizontalInput = Input.GetAxis("Horizontal");
-
-    //    // Input til hastighed (W/S eller op/ned)
-    //    float verticalInput = Input.GetAxis("Vertical");
-
-    //    // Juster hastigheden (W = acceleration, S = deceleration)
-    //    if (verticalInput > 0) // W-tasten: Acceler�r
-    //    {
-    //        speed += acceleration * Time.deltaTime;
-    //    }
-    //    else if (verticalInput < 0) // S-tasten: S�nk hastigheden
-    //    {
-    //        speed -= deceleration * Time.deltaTime;
-    //    }
-
-    //    // Begr�ns hastigheden til at v�re mellem 0 og maxSpeed
-    //    speed = Mathf.Clamp(speed, 0, maxSpeed);
-
-    //    // Bev�g bilen opad langs y-aksen (fremad)
-    //    // Bilen skal kun bev�ge sig opad langs y-aksen uden rotation
-    //    transform.Translate(Vector2.up * speed * Time.deltaTime);
-
-    //    // Bev�g bilen sidel�ns langs x-aksen
-    //    transform.Translate(Vector2.right * horizontalInput * verticalSpeed * Time.deltaTime);
-    //}
-    // Kollision med objekter
-    // Kollision med objekter
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Hvis bilen rammer en barriere
@@ -115,14 +98,17 @@ public class playerMovement : MonoBehaviour
             Debug.Log("Bilen ramte et objekt: " + collision.gameObject.name);
 
             // Sænk bilens hastighed
-            speed = Mathf.Clamp(speed - 7f, 0, maxSpeed);
+            speed = Mathf.Clamp(speed - 12f, 0, maxSpeed);
 
             // Aktivér "Hit"-animation
             if (animator != null)
             {
                 animator.SetTrigger("Hit");
             }
-        }
 
+            // Fjern objektet
+            Destroy(collision.gameObject);
+            sFXManager.PlaySFX(sFXManager.CollisionObstacle); //Spiller lyd til collision med sten/skrald/mm
+        }
     }
 }
