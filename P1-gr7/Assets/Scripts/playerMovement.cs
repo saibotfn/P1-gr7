@@ -13,12 +13,17 @@ public class playerMovement : MonoBehaviour
     public float horizontalSpeed = 6f; // speed of swerving
     private Animator animator;      //sætter animatoren op så bilen kan dreje rundt
     private float currentSpeed;
+    public float obstacleSlowdown = 10f;
 
     private float horizontalInput; // Input til sidelæns bevægelse
     SFXManager sFXManager;
 
     private bool canMove = false; // Flag to control movement
 
+    private void Awake() 
+    {
+        sFXManager = FindObjectOfType<SFXManager>();// Initialize SFXManager
+    }
     void Start()
     {
         // Sørg for at bilen starter med den rigtige rotation (peger opad)
@@ -26,8 +31,7 @@ public class playerMovement : MonoBehaviour
         animator = GetComponent<Animator>(); //Finder animator componenten frem
         currentSpeed = verticalSpeed;
 
-        // Initialize SFXManager if needed
-        sFXManager = FindObjectOfType<SFXManager>();
+        // Initialize SFXManager
 
         // Start the coroutine to enable movement after 4 seconds
         StartCoroutine(EnableMovementAfterDelay(4f));
@@ -43,6 +47,7 @@ public class playerMovement : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log("din far er: " + currentSpeed);
         if (!canMove) return; // Prevent movement if canMove is false
 
         // Adjust speed based on input
@@ -98,7 +103,7 @@ public class playerMovement : MonoBehaviour
             Debug.Log("Bilen ramte et objekt: " + collision.gameObject.name);
 
             // Sænk bilens hastighed
-            speed = Mathf.Clamp(speed - 12f, 0, maxSpeed);
+            currentSpeed = Mathf.Clamp(currentSpeed - obstacleSlowdown, 0, maxSpeed);
 
             // Aktivér "Hit"-animation
             if (animator != null)
@@ -108,7 +113,14 @@ public class playerMovement : MonoBehaviour
 
             // Fjern objektet
             Destroy(collision.gameObject);
-            sFXManager.PlaySFX(sFXManager.CollisionObstacle); //Spiller lyd til collision med sten/skrald/mm
+            if (sFXManager != null)
+            {
+                sFXManager.PlaySFX(sFXManager.CollisionObstacle); //Spiller lyd til collision med sten/skrald/mm
+            }
+            else if (sFXManager == null)
+            {
+                Debug.Log("sFXManager is null");
+            }
         }
     }
 }
