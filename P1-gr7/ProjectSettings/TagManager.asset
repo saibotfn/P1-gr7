@@ -53,6 +53,12 @@ TagManager:
   - name: Obstacles
     uniqueID: 2747946813
     locked: 0
+  - name: Finish Line
+    uniqueID: 2638141643
+    locked: 0
+  - name: Ghost player
+    uniqueID: 3538388093
+    locked: 0
   - name: Player
     uniqueID: 415357277
     locked: 0
