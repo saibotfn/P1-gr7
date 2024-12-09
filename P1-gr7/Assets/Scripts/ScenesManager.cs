@@ -23,7 +23,9 @@ public class ScenesManager : MonoBehaviour
         //MainMenu,
         SettingScene,
         WorldScene,
-        ChooseCharacterScene
+        ChooseCharacterScene,
+        OneDirection,
+        WildWest
     }
 
     public void LoadScene(Scene scene)
@@ -60,6 +62,10 @@ public class ScenesManager : MonoBehaviour
     public void LoadChooseCharacterScene()
     {
         SceneManager.LoadScene(Scene.ChooseCharacterScene.ToString());
+    }
+    public void LoadWildWestScene()
+    {
+        SceneManager.LoadScene(Scene.WildWest.ToString());
     }
     private void UpdateCurrentSceneIndex()
     {
