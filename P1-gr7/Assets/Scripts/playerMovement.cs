@@ -13,6 +13,7 @@ public class playerMovement : MonoBehaviour
     public float horizontalSpeed = 6f; // speed of swerving
     private Animator animator;      //sætter animatoren op så bilen kan dreje rundt
     private float currentSpeed;
+    public float obstacleSlowdown = 10f;
 
     private float horizontalInput; // Input til sidelæns bevægelse
     SFXManager sFXManager;
@@ -46,6 +47,7 @@ public class playerMovement : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log("din far er: " + currentSpeed);
         if (!canMove) return; // Prevent movement if canMove is false
 
         // Adjust speed based on input
@@ -101,7 +103,7 @@ public class playerMovement : MonoBehaviour
             Debug.Log("Bilen ramte et objekt: " + collision.gameObject.name);
 
             // Sænk bilens hastighed
-            speed = Mathf.Clamp(speed - 12f, 0, maxSpeed);
+            currentSpeed = Mathf.Clamp(currentSpeed - obstacleSlowdown, 0, maxSpeed);
 
             // Aktivér "Hit"-animation
             if (animator != null)
