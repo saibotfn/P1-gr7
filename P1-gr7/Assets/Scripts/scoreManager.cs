@@ -42,7 +42,10 @@ public class scoreManager : MonoBehaviour
 
     public void ShowWinScreen()
     {
-        winScreen.SetActive(true); // Activate the Win Screen
+        if (winScreen != null)
+        {
+            winScreen.SetActive(true); // Activate the Win Screen
+        }
         Time.timeScale = 0; // Pause the game (optional)
     }
 

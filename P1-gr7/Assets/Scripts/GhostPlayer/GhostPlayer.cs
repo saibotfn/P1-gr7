@@ -17,7 +17,7 @@ public class GhostPlayer : MonoBehaviour
     {
         timeValue = 0;
 
-        if (!ghostHolder.isReplay) //hides ghost if not replaying
+        if (ghostHolder.recordTimeStamp.Count == 0) //hides ghost if not replaying
         {
             GetComponent<Renderer>().enabled = false;
         }
