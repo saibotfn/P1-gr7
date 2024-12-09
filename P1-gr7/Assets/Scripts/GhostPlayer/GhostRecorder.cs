@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GhostRecorder : MonoBehaviour
 {
@@ -9,30 +10,28 @@ public class GhostRecorder : MonoBehaviour
 
     private float timer;
     private float timeValue;
+    ScenesManager scenesManager;
 
     private void Awake()
     {
-        if (ghostHolder.isRecord) //Resets data in the lists, timeValue and timer
-        {
-            ghostHolder.ResetData();
-            timeValue = 0;
-            timer = 0;
-        }
+        scenesManager = FindObjectOfType<ScenesManager>();
+        ghostHolder.ResetData();
+        timeValue = 0;
+        timer = 0;
     }
 
     private void Update()
     {
-        timer += Time.unscaledDeltaTime;
-        timeValue += Time.unscaledDeltaTime;
+            timer += Time.unscaledDeltaTime;
+            timeValue += Time.unscaledDeltaTime;
 
-        if(ghostHolder.isRecord & timer >= 1 / ghostHolder.recordFrequency) //Adds to the lists ghostHolder.recordFrequency/sec
-        {
-            ghostHolder.timeStamp.Add(timeValue);
-            ghostHolder.position.Add(this.transform.position);
-            //ghostHolder.rotation.Add(this.transform.eulerAngles);
+            if (ghostHolder.isRecord & timer >= 1 / ghostHolder.recordFrequency) //Adds to the lists ghostHolder.recordFrequency/sec
+            {
+                ghostHolder.timeStamp.Add(timeValue);
+                ghostHolder.position.Add(this.transform.position);
+                //ghostHolder.rotation.Add(this.transform.eulerAngles);
 
-            timer = 0;
-        }
-
+                timer = 0;
+            }
     }
 }

@@ -47,7 +47,7 @@ public class playerMovement : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("din far er: " + currentSpeed);
+        //Debug.Log("din far er: " + currentSpeed);
         if (!canMove) return; // Prevent movement if canMove is false
 
         // Adjust speed based on input
@@ -88,6 +88,7 @@ public class playerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("collision");
         // Hvis bilen rammer en barriere
         if (collision.gameObject.CompareTag("Barrier"))
         {
@@ -111,8 +112,6 @@ public class playerMovement : MonoBehaviour
                 animator.SetTrigger("Hit");
             }
 
-            // Fjern objektet
-            Destroy(collision.gameObject);
             if (sFXManager != null)
             {
                 sFXManager.PlaySFX(sFXManager.CollisionObstacle); //Spiller lyd til collision med sten/skrald/mm
@@ -121,6 +120,8 @@ public class playerMovement : MonoBehaviour
             {
                 Debug.Log("sFXManager is null");
             }
+            // Fjern objektet
+            Destroy(collision.gameObject);
         }
     }
 }

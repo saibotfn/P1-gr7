@@ -17,17 +17,23 @@ public class FinishLine : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Player crossed the finish line!");
-            scoreManager.instance.ShowWinScreen(); // Show the Win Screen
-
-            if(ghostHolder.recordTimeStamp.Count == 0) //If no record time yet, add the new time as record
+            Time.timeScale = 0f;
+            if (scoreManager.instance != null)
             {
-                ghostHolder.UpdateRecord();
-                NewRecord();
+                scoreManager.instance.ShowWinScreen(); // Show the Win Screen
             }
-            else if (ghostHolder.timeStamp[^1] < ghostHolder.recordTimeStamp[^1]) //Updates the record for the ghost player if new run time is better than old record
+            if (ghostHolder != null)
             {
-                ghostHolder.UpdateRecord();
-                NewRecord();
+                if (ghostHolder.recordTimeStamp.Count == 0) //If no record time yet, add the new time as record
+                {
+                    ghostHolder.UpdateRecord();
+                    NewRecord();
+                }
+                else if (ghostHolder.timeStamp[^1] < ghostHolder.recordTimeStamp[^1]) //Updates the record for the ghost player if new run time is better than old record
+                {
+                    ghostHolder.UpdateRecord();
+                    NewRecord();
+                }
             }
         }
     }

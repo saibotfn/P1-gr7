@@ -5,9 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ScenesManager : MonoBehaviour
 {
-
     public static ScenesManager Instance;
-
 
     public int CurrentSceneIndex { get; private set; }
 
