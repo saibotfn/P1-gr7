@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WildWest.unity
     guid: a8c90dd64143d41c2926896ab161874c
+  - enabled: 1
+    path: Assets/Scenes/1stLevel.unity
+    guid: dbc0625a38a3abc40aa5218085579c97
   m_configObjects: {}

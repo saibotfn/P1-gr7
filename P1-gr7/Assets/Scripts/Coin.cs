@@ -13,7 +13,7 @@ public class Coin : MonoBehaviour
 
     private void Awake()
     {
-        sFXManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SFXManager>();
+        sFXManager = FindObjectOfType<SFXManager>();
     }
     void OnTriggerEnter2D(Collider2D other)
     {

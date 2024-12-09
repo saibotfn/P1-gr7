@@ -20,11 +20,11 @@ public class ScenesManager : MonoBehaviour
     public enum Scene
     {
         StartScreen,
-        //MainMenu,
         SettingScene,
         WorldScene,
         ChooseCharacterScene,
         OneDirection,
+        WildForest,
         WildWest
     }
 
@@ -66,6 +66,10 @@ public class ScenesManager : MonoBehaviour
     public void LoadWildWestScene()
     {
         SceneManager.LoadScene(Scene.WildWest.ToString());
+    }
+    public void LoadWildForest()
+    {
+        SceneManager.LoadScene(Scene.WildForest.ToString());
     }
     private void UpdateCurrentSceneIndex()
     {
