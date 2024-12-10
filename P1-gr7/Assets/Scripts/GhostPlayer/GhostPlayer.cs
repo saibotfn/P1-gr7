@@ -30,12 +30,8 @@ public class GhostPlayer : MonoBehaviour
         {
             // Checks if the list are empty and only runs the for-loop if not
             timeValue += Time.unscaledDeltaTime;
-
-            if (ghostHolder.isReplay)
-            {
-                GetIndex();
-                SetTransform();
-            }
+            GetIndex();
+            SetTransform();
         }
     }
     private void GetIndex() //For-loop increases the indices
