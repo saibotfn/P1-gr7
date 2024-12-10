@@ -10,6 +10,6 @@ public class DisplayControls : MonoBehaviour
     void Start()
     {
         textMeshPro = GetComponent<TextMeshProUGUI>();
-        textMeshPro.text = "drej med \"a\" og \"d\"\n Styr din fart med \".\"";
+        textMeshPro.text = "drej med \"a\" og \"d\"\n kontroller din fart med \".\"";
     }
 }
