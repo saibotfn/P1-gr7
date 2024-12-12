@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class scoreManager : MonoBehaviour
 {
@@ -54,6 +55,11 @@ public class scoreManager : MonoBehaviour
     score = 0; // Reset score
     updateScoreText(); // Update the UI
     Time.timeScale = 1; // Resume time
-    UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name); // Reload scene
+    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+}
+public void LoadStartScreen()
+{
+    // Replace "StartScreenSceneName" with the name of your start screen scene
+    SceneManager.LoadScene("StartScreen");
 }
 }
