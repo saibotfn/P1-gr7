@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class GhostHolder : ScriptableObject
 {
-    public float recordFrequency = 2; //Determines how often data is saved to the lists
+    public float recordFrequency = 5; //Determines how often data is saved to the lists
 
     // Lists used to store time and positions
     public List<float> timeStamp = new List<float>();

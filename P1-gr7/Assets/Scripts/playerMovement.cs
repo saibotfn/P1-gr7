@@ -18,7 +18,7 @@ public class playerMovement : MonoBehaviour
     private float horizontalInput; // Input til sidelæns bevægelse
     SFXManager sFXManager;
 
-    private bool canMove = false; // Flag to control movement
+    public bool canMove = false; // Flag to control movement
 
     void Start()
     {
