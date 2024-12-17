@@ -13,12 +13,7 @@ public class scoreManager : MonoBehaviour
     public GameObject winScreen; // Reference to the Win Screen Canvas
 
 
-    private void Start()
-    {
-        Debug.Log(winScreen.activeSelf);
-        winScreen.SetActive(true); // Activate the Win Screen
-
-    }
+ 
 
     void Awake()
     {
@@ -51,11 +46,11 @@ public class scoreManager : MonoBehaviour
 
     public void ShowWinScreen()
     {
-        Debug.Log("shi works semi");
-        if (winScreen.activeSelf == true)
+
+        if (winScreen != null)
         {
-            Debug.Log("Shi should Work");
-            winScreen.SetActive(false); // Activate the Win Screen
+
+            winScreen.SetActive(true); // Activate the Win Screen
         }
         Time.timeScale = 0; // Pause the game (optional)
     }
