@@ -45,16 +45,14 @@ public class playerMovement : MonoBehaviour
     private void Update()
     {
 
-        Debug.Log(currentSpeed);
-
         if (!canMove) return; // Prevent movement if canMove is false
 
         // Adjust speed based on input
-        if (Input.GetKey(KeyCode.Period))
+        if (Input.GetKey(KeyCode.W))
         {
             currentSpeed += acceleration * Time.deltaTime;
         }
-        else if (Input.GetKey(KeyCode.Comma))
+        else if (Input.GetKey(KeyCode.S))
         {
             currentSpeed -= deceleration * Time.deltaTime;
         }

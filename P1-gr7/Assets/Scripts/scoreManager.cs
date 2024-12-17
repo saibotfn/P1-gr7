@@ -9,7 +9,15 @@ public class scoreManager : MonoBehaviour
     public static scoreManager instance;
     public int score = 0;
     public TMP_Text scoreText;
+    public GameObject winScreen; // Reference to the Win Screen Canvas
 
+
+    private void Start()
+    {
+        Debug.Log(winScreen.activeSelf);
+        winScreen.SetActive(true); // Activate the Win Screen
+
+    }
 
     void Awake()
     {
@@ -38,13 +46,15 @@ public class scoreManager : MonoBehaviour
             scoreText.text = "Coins: " + score.ToString();
         }
     }
-       public GameObject winScreen; // Reference to the Win Screen Canvas
+       
 
     public void ShowWinScreen()
     {
-        if (winScreen != null)
+        Debug.Log("shi works semi");
+        if (winScreen.activeSelf == true)
         {
-            winScreen.SetActive(true); // Activate the Win Screen
+            Debug.Log("Shi should Work");
+            winScreen.SetActive(false); // Activate the Win Screen
         }
         Time.timeScale = 0; // Pause the game (optional)
     }
