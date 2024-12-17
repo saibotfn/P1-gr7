@@ -6,26 +6,32 @@ using UnityEngine.SceneManagement;
 public class GhostRecorder : MonoBehaviour
 {
     public GhostHolder ghostHolder;
-    //If working on implementing ghost play on 2 levels: Create ghostHolder for level 1 and 2
+
 
     private float timer;
     private float timeValue;
-    ScenesManager scenesManager;
+    playerMovement playerMovement;
 
     private void Awake()
     {
-        scenesManager = FindObjectOfType<ScenesManager>();
+        playerMovement = FindObjectOfType<playerMovement>(); //Instantiates playerMovement to access bool canMove
+
         ghostHolder.ResetData();
         timeValue = 0;
         timer = 0;
+
+        ghostHolder.timeStamp.Add(0); //Hardcodes that the lists start at time 0 and position 0
+        ghostHolder.position.Add(new Vector2(0, 0));
     }
 
     private void Update()
     {
+        if (playerMovement.canMove)
+        {
             timer += Time.unscaledDeltaTime;
             timeValue += Time.unscaledDeltaTime;
 
-            if (ghostHolder.isRecord & timer >= 1 / ghostHolder.recordFrequency) //Adds to the lists ghostHolder.recordFrequency/sec
+            if (timer >= 1 / ghostHolder.recordFrequency) //Adds to the lists ghostHolder.recordFrequency/sec
             {
                 ghostHolder.timeStamp.Add(timeValue);
                 ghostHolder.position.Add(this.transform.position);
@@ -33,5 +39,6 @@ public class GhostRecorder : MonoBehaviour
 
                 timer = 0;
             }
+        }
     }
 }

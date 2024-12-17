@@ -18,12 +18,8 @@ public class playerMovement : MonoBehaviour
     private float horizontalInput; // Input til sidelæns bevægelse
     SFXManager sFXManager;
 
-    private bool canMove = false; // Flag to control movement
+    public bool canMove = false; // Flag to control movement
 
-    private void Awake() 
-    {
-        sFXManager = FindObjectOfType<SFXManager>();// Initialize SFXManager
-    }
     void Start()
     {
         // Sørg for at bilen starter med den rigtige rotation (peger opad)
@@ -31,7 +27,8 @@ public class playerMovement : MonoBehaviour
         animator = GetComponent<Animator>(); //Finder animator componenten frem
         currentSpeed = verticalSpeed;
 
-        // Initialize SFXManager
+        // Initialize SFXManager if needed
+        sFXManager = FindObjectOfType<SFXManager>();
 
         // Start the coroutine to enable movement after 4 seconds
         StartCoroutine(EnableMovementAfterDelay(4f));
@@ -47,15 +44,15 @@ public class playerMovement : MonoBehaviour
 
     private void Update()
     {
-        //Debug.Log("din far er: " + currentSpeed);
+
         if (!canMove) return; // Prevent movement if canMove is false
 
         // Adjust speed based on input
-        if (Input.GetKey(KeyCode.Period))
+        if (Input.GetKey(KeyCode.W))
         {
             currentSpeed += acceleration * Time.deltaTime;
         }
-        else if (Input.GetKey(KeyCode.Comma))
+        else if (Input.GetKey(KeyCode.S))
         {
             currentSpeed -= deceleration * Time.deltaTime;
         }
@@ -111,6 +108,11 @@ public class playerMovement : MonoBehaviour
             {
                 animator.SetTrigger("Hit");
             }
+
+
+            // Fjern objektet
+            Destroy(collision.gameObject);
+            sFXManager.PlaySFX(sFXManager.CollisionObstacle); //Spiller lyd til collision med sten/skrald/mm
 
             if (sFXManager != null)
             {
