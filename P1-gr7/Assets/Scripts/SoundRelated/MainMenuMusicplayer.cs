@@ -11,7 +11,7 @@ public class MainMenuMusicPlayer : MonoBehaviour
 
     private static MainMenuMusicPlayer instance;
 
-    int lastMenuSceneIndex = (int)ScenesManager.Scene.ChooseCharacterScene; //used for checking if menu music should stop, start or just keep playing
+    int lastMenuSceneIndex = (int)ScenesManager.Scene.WorldScene; //used for checking if menu music should stop, start or just keep playing
 
     int currentSceneIndex;
     int previousSceneIndex;
