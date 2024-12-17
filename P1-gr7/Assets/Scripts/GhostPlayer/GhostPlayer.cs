@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -11,11 +12,15 @@ public class GhostPlayer : MonoBehaviour
     int index1;
     int index2;
 
+    playerMovement playerMovement;
+
     
 
     private void Awake()
     {
         timeValue = 0;
+        playerMovement = FindObjectOfType<playerMovement>();
+
 
         if (ghostHolder.recordTimeStamp.Count == 0) //hides ghost if not replaying
         {
@@ -26,9 +31,9 @@ public class GhostPlayer : MonoBehaviour
     
     private void Update() //Increments timeValue and calls methods GetIndex() and SetTransform() which moves the ghost car
     {
-        if (!(ghostHolder.recordTimeStamp.Count == 0) && !(ghostHolder.recordPosition.Count == 0)) //Only runs if lists aren't empty
+        if (!(ghostHolder.recordTimeStamp.Count == 0) && !(ghostHolder.recordPosition.Count == 0) && playerMovement.canMove) //Only runs if lists aren't empty and player movement is enabled
         {
-            // Checks if the list are empty and only runs the for-loop if not
+
             timeValue += Time.unscaledDeltaTime;
             GetIndex();
             SetTransform();
