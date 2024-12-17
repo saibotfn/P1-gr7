@@ -22,6 +22,7 @@ public class playerMovement : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1f;
         // Sørg for at bilen starter med den rigtige rotation (peger opad)
         transform.rotation = Quaternion.Euler(0, 0, 0); // Sæt rotationen til 0 på Z-aksen (peger opad)
         animator = GetComponent<Animator>(); //Finder animator componenten frem
