@@ -11,7 +11,7 @@ public class MainMenuMusicPlayer : MonoBehaviour
 
     private static MainMenuMusicPlayer instance;
 
-    //int lastMenuSceneIndex = 3;
+    int lastMenuSceneIndex = (int)ScenesManager.Scene.WorldScene; //used for checking if menu music should stop, start or just keep playing
 
     int currentSceneIndex;
     int previousSceneIndex;
@@ -59,17 +59,17 @@ public class MainMenuMusicPlayer : MonoBehaviour
         currentSceneIndex = scene.buildIndex; //Sets the currentSceneIndex to the index of the current scene
 
         // Will exit function if scene index was and is <=2, meaning main menu music will keep playing
-        if (previousSceneIndex <= 2 && currentSceneIndex <= 2)
+        if (previousSceneIndex <= lastMenuSceneIndex && currentSceneIndex <= lastMenuSceneIndex)
         {
             return;
         }
         //Start the menu music if scene is changed from the game to the menu
-        if (previousSceneIndex > 2 && currentSceneIndex <= 2)
+        if (previousSceneIndex > lastMenuSceneIndex && currentSceneIndex <= lastMenuSceneIndex)
         {
             StartMenuMusic();
         }
         //Stop the menu music if scene is changed from the menu to the game
-        if (previousSceneIndex <= 2 && currentSceneIndex > 2)
+        if (previousSceneIndex <= lastMenuSceneIndex && currentSceneIndex > lastMenuSceneIndex)
         {
             musicSource.Stop();
         }

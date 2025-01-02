@@ -7,10 +7,10 @@ public class Coin : MonoBehaviour
     public int coinValue = 1;
 
     SFXManager sFXManager;
-
+  
     private void Awake()
     {
-        sFXManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SFXManager>();
+        sFXManager = FindObjectOfType<SFXManager>();
     }
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -18,10 +18,20 @@ public class Coin : MonoBehaviour
         {
             Debug.Log("Player touched a coin");
             scoreManager.instance.addScore(coinValue);
-            sFXManager.PlaySFX(sFXManager.CoinPickup); //Spiller lyd, når man samler mønt op
 
+            if (sFXManager == null)
+            {
+                Debug.LogError("SFXManager is null.");
+            }
+            else if (sFXManager.CoinPickup == null)
+            {
+                Debug.LogError("CoinPickup is null.");
+            }
+            else
+            {
+                sFXManager.PlaySFX(sFXManager.CoinPickup);
+            }
             Destroy(gameObject);
-
         }
     }
 

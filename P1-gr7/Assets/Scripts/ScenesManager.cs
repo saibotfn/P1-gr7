@@ -5,9 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ScenesManager : MonoBehaviour
 {
-
     public static ScenesManager Instance;
-
 
     public int CurrentSceneIndex { get; private set; }
 
@@ -20,9 +18,12 @@ public class ScenesManager : MonoBehaviour
     public enum Scene
     {
         StartScreen,
-        MainMenu,
         SettingScene,
-
+        WorldScene,
+        ChooseCharacterScene,
+        OneDirection,
+        WildForest,
+        WildWest
     }
 
     public void LoadScene(Scene scene)
@@ -42,16 +43,32 @@ public class ScenesManager : MonoBehaviour
 
     }
 
-    public void LoadMainMenu()
+    public void LoadStartScreen()
     {
-        SceneManager.LoadScene(Scene.MainMenu.ToString());
+        SceneManager.LoadScene(Scene.StartScreen.ToString());
+        Debug.Log("Button is pressed");
     }
 
     public void LoadSettingScene()
     {
         SceneManager.LoadScene(Scene.SettingScene.ToString());
     }
-
+    public void LoadWorldScene()
+    {
+        SceneManager.LoadScene(Scene.WorldScene.ToString());
+    }
+    public void LoadChooseCharacterScene()
+    {
+        SceneManager.LoadScene(Scene.ChooseCharacterScene.ToString());
+    }
+    public void LoadWildWestScene()
+    {
+        SceneManager.LoadScene(Scene.WildWest.ToString());
+    }
+    public void LoadWildForest()
+    {
+        SceneManager.LoadScene(Scene.WildForest.ToString());
+    }
     private void UpdateCurrentSceneIndex()
     {
         CurrentSceneIndex = SceneManager.GetActiveScene().buildIndex;

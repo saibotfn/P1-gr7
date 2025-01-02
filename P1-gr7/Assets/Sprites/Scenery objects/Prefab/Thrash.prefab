@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7217490632353487330}
   - component: {fileID: 2188404945701894503}
+  - component: {fileID: -6032199001229663421}
   m_Layer: 0
   m_Name: Thrash
   m_TagString: Obstacle
@@ -78,6 +79,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2715205, y: 0.7871033}
   m_EdgeRadius: 0
+--- !u!210 &-6032199001229663421
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871334950064213965}
+  m_Enabled: 1
+  m_SortingLayerID: -1547020483
+  m_SortingLayer: 3
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &7803342786711218357
 GameObject:
   m_ObjectHideFlags: 0
