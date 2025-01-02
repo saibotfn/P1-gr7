@@ -375,15 +375,15 @@ RectTransform:
   m_GameObject: {fileID: 306378543}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1125, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 940643460}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -47.3827, y: -0.00091354}
-  m_SizeDelta: {x: 1706.7234, y: 1080}
+  m_AnchoredPosition: {x: -8.5292, y: -0.00018112}
+  m_SizeDelta: {x: 1776.5725, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &306378545
 MonoBehaviour:
@@ -1457,7 +1457,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2101012593}
         m_TargetAssemblyTypeName: ScenesManager, Assembly-CSharp
-        m_MethodName: LoadMainMenu
+        m_MethodName: LoadNewGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
