@@ -13,7 +13,7 @@ public class playerMovement : MonoBehaviour
     public float horizontalSpeed = 6f; // speed of swerving
     private Animator animator;      //sætter animatoren op så bilen kan dreje rundt
     private float currentSpeed;
-    public float obstacleSlowdown = 10f;
+    public float obstacleSlowdown = 10f; // Hvor meget bilens fart sænkes
 
     private float horizontalInput; // Input til sidelæns bevægelse
     SFXManager sFXManager;
@@ -23,7 +23,7 @@ public class playerMovement : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1f;
-        // Sørg for at bilen starter med den rigtige rotation (peger opad)
+        // Sørger for at bilen starter med den rigtige rotation (peger opad)
         transform.rotation = Quaternion.Euler(0, 0, 0); // Sæt rotationen til 0 på Z-aksen (peger opad)
         animator = GetComponent<Animator>(); //Finder animator componenten frem
         currentSpeed = verticalSpeed;
@@ -35,7 +35,7 @@ public class playerMovement : MonoBehaviour
         StartCoroutine(EnableMovementAfterDelay(4f));
     }
 
-    IEnumerator EnableMovementAfterDelay(float delay)
+    IEnumerator EnableMovementAfterDelay(float delay) // Makes sure that the car doesn't drive right away
     {
         // Wait for the specified delay
         yield return new WaitForSeconds(delay);
@@ -110,7 +110,6 @@ public class playerMovement : MonoBehaviour
                 animator.SetTrigger("Hit");
             }
 
-
             // Fjern objektet
             Destroy(collision.gameObject);
             sFXManager.PlaySFX(sFXManager.CollisionObstacle); //Spiller lyd til collision med sten/skrald/mm
@@ -127,4 +126,5 @@ public class playerMovement : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
+
 }
