@@ -4,37 +4,53 @@ using UnityEngine;
 
 public class FinishLine : MonoBehaviour
 {
-    public GhostHolder ghostHolder;
-    //If working on implementing ghost play on 2 levels: Create two ghostHolders
+ // Reference to a GhostHolder object that manages ghost player records and times
+public GhostHolder ghostHolder;
 
-    private void NewRecord() //Displays new record time
-    {
-        Debug.Log($"NEW RECORD! Time is {ghostHolder.timeStamp[^1]} !");
-    }
-    private void OnTriggerEnter2D(Collider2D other)
-    {
+// If implementing ghost play on two levels, consider creating two separate ghostHolder instances for each level
 
-        if (other.CompareTag("Player"))
+// Method to display a new record time
+private void NewRecord()
+{
+    // Logs the latest timestamp as a new record to the console
+    Debug.Log($"NEW RECORD! Time is {ghostHolder.timeStamp[^1]} !");
+}
+
+// Method triggered when another object enters a 2D trigger collider attached to this object
+private void OnTriggerEnter2D(Collider2D other)
+{
+    // Check if the colliding object has the "Player" tag
+    if (other.CompareTag("Player"))
+    {
+        // Log a message indicating that the player has crossed the finish line
+        Debug.Log("Player crossed the finish line!");
+
+        // Pause the game by setting time scale to 0
+        Time.timeScale = 0f;
+
+        // Check if a ScoreManager instance exists
+        if (scoreManager.instance != null)
         {
-            Debug.Log("Player crossed the finish line!");
-            Time.timeScale = 0f;
-            if (scoreManager.instance != null)
+            // Show the win screen via the ScoreManager
+            scoreManager.instance.ShowWinScreen();
+        }
+
+        // Check if a GhostHolder instance is assigned
+        if (ghostHolder != null)
+        {
+            // If there are no record timestamps yet, set the current run time as the new record
+            if (ghostHolder.recordTimeStamp.Count == 0)
             {
-                scoreManager.instance.ShowWinScreen(); // Show the Win Screen
+                ghostHolder.UpdateRecord(); // Update the ghost record
+                NewRecord();               // Display the new record
             }
-            if (ghostHolder != null)
+            // If the current run time is better than the previous record, update the record
+            else if (ghostHolder.timeStamp[^1] < ghostHolder.recordTimeStamp[^1])
             {
-                if (ghostHolder.recordTimeStamp.Count == 0) //If no record time yet, add the new time as record
-                {
-                    ghostHolder.UpdateRecord();
-                    NewRecord();
-                }
-                else if (ghostHolder.timeStamp[^1] < ghostHolder.recordTimeStamp[^1]) //Updates the record for the ghost player if new run time is better than old record
-                {
-                    ghostHolder.UpdateRecord();
-                    NewRecord();
-                }
+                ghostHolder.UpdateRecord(); // Update the ghost record
+                NewRecord();               // Display the new record
             }
         }
     }
+}
 }
