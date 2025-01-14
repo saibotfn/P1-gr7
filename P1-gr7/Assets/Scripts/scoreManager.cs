@@ -7,10 +7,17 @@ using UnityEngine.SceneManagement;
 
 public class scoreManager : MonoBehaviour
 {
-    public static scoreManager instance;
-    public int score = 0;
-    public TMP_Text scoreText;
-    public GameObject winScreen; // Reference to the Win Screen Canvas
+// Singleton instance to ensure only one instance of the ScoreManager exists
+public static scoreManager instance;
+
+// Integer variable to store the player's current score
+public int score = 0;
+
+// Reference to the TextMeshPro text element that displays the score on the UI
+public TMP_Text scoreText;
+
+// Reference to the GameObject representing the Win Screen Canvas
+public GameObject winScreen;
 
 
  
